@@ -306,6 +306,10 @@ public final class ControlTaintTagStack {
         return influenceExceptions == null || influenceExceptions.isEmpty();
     }
 
+    public SinglyLinkedList<Taint> getTaintHistory() {
+        return taintHistory;
+    }
+
     @SuppressWarnings("unused")
     @InvokedViaInstrumentation(record = CONTROL_STACK_ENABLE)
     public void enable() {

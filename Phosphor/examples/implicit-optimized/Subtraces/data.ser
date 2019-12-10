@@ -1,0 +1,12 @@
+edu/cmu/cs/mvelezce/analysis/Subtraces.main([Ljava/lang/String;)V.1
+
+0
+edu/cmu/cs/mvelezce/analysis/Subtraces.foo(Z)V.1
+0
+2
+edu/cmu/cs/mvelezce/analysis/Subtraces.main([Ljava/lang/String;)V.2
+
+1
+edu/cmu/cs/mvelezce/analysis/Subtraces.main([Ljava/lang/String;)V.3
+
+0

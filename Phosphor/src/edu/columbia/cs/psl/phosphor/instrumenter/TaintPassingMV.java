@@ -20,10 +20,14 @@ import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.util.Printer;
 import org.objectweb.asm.util.Textifier;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 import static edu.columbia.cs.psl.phosphor.TaintUtils.FORCE_CTRL_STORE;
 import static edu.columbia.cs.psl.phosphor.instrumenter.TaintMethodRecord.*;
 
 public class TaintPassingMV extends TaintAdapter implements Opcodes {
+
+    private static final java.util.Map<String, Integer> METHODS_TO_IF_COUNTS = new ConcurrentHashMap<>();
 
     static final String BYTE_NAME = "java/lang/Byte";
     static final String BOOLEAN_NAME = "java/lang/Boolean";
@@ -60,6 +64,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
     private boolean nextDupCopiesTaint2 = false;
     private boolean nextDupCopiesTaint3 = false;
     private ControlFlowDelegator controlFlowDelegator;
+    private final String originalDesc;
 
     public TaintPassingMV(MethodVisitor mv, int access, String className, String name, String desc, String signature,
                           String[] exceptions, String originalDesc, NeverNullArgAnalyzerAdapter analyzer,
@@ -88,6 +93,12 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
             paramTypes[n] = newArgType;
             n += newArgType.getSize();
         }
+        this.originalDesc = originalDesc;
+
+        if (Configuration.WITH_CC_SINKS) {
+            String classAndMethodName = getClassAndMethodName(className, name, originalDesc);
+            METHODS_TO_IF_COUNTS.putIfAbsent(classAndMethodName, 0);
+        }
     }
 
     void setArrayAnalyzer(PrimitiveArrayAnalyzer primitiveArrayFixer) {
@@ -99,7 +110,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
         super.visitCode();
         if((Configuration.IMPLICIT_TRACKING || isImplicitLightTracking) && !Configuration.WITHOUT_PROPAGATION) {
             controlFlowDelegator = new PropagatingControlFlowDelegator(mv, passThroughMV, analyzer, lvs, arrayAnalyzer,
-                    className, name, lastArg, paramTypes);
+                    className, name, lastArg, paramTypes, this);
         } else {
             controlFlowDelegator = new NoFlowControlFlowDelegator(mv, lvs, name);
         }
@@ -3266,8 +3277,18 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
     @Override
     public void visitJumpInsn(int opcode, Label label) {
         if(!isIgnoreAllInstrumenting) {
-            controlFlowDelegator.visitingJump(opcode);
             boolean implicit = (Configuration.IMPLICIT_TRACKING || isImplicitLightTracking) && !Configuration.WITHOUT_PROPAGATION;
+
+            if(implicit && Configuration.WITH_CC_SINKS /*&& opcode >= Opcodes.IFEQ && opcode <= Opcodes.IF_ACMPNE*/) {
+                String classAndMethodName = getClassAndMethodName(this.className, this.name, this.originalDesc);
+                int ifCount = METHODS_TO_IF_COUNTS.get(classAndMethodName);
+
+                ifCount++;
+                METHODS_TO_IF_COUNTS.put(classAndMethodName, ifCount);
+            }
+
+            controlFlowDelegator.visitingJump(opcode);
+
             boolean box = implicit ? !boxAtNextJump.isEmpty() : !boxAtNextJump.isEmpty() && opcode != Opcodes.GOTO;
             if(box) {
                 Label newTarget = new Label();
@@ -3317,6 +3338,14 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
         if(isIgnoreAllInstrumenting) {
             super.visitTableSwitchInsn(min, max, defaultLabel, labels);
         } else {
+            if(Configuration.WITH_CC_SINKS) {
+                String classAndMethodName = getClassAndMethodName(this.className, this.name, this.originalDesc);
+                int ifCount = METHODS_TO_IF_COUNTS.get(classAndMethodName);
+
+                ifCount++;
+                METHODS_TO_IF_COUNTS.put(classAndMethodName, ifCount);
+            }
+
             controlFlowDelegator.visitingSwitch();
             Configuration.taintTagFactory.tableSwitch(min, max, defaultLabel, labels, mv, lvs, this);
         }
@@ -3327,6 +3356,14 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
         if(isIgnoreAllInstrumenting) {
             super.visitLookupSwitchInsn(defaultLabel, keys, labels);
         } else {
+            if(Configuration.WITH_CC_SINKS) {
+                String classAndMethodName = getClassAndMethodName(this.className, this.name, this.originalDesc);
+                int ifCount = METHODS_TO_IF_COUNTS.get(classAndMethodName);
+
+                ifCount++;
+                METHODS_TO_IF_COUNTS.put(classAndMethodName, ifCount);
+            }
+
             controlFlowDelegator.visitingSwitch();
             Configuration.taintTagFactory.lookupSwitch(defaultLabel, keys, labels, mv, lvs, this);
         }
@@ -3384,5 +3421,25 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
             default:
                 return false;
         }
+    }
+
+    String getClassName() {
+        return this.className;
+    }
+
+    String getName() {
+        return this.name;
+    }
+
+    public static java.util.Map<String, Integer> getMethodsToIfCounts() {
+        return METHODS_TO_IF_COUNTS;
+    }
+
+    static String getClassAndMethodName(String className, String methodName, String desc) {
+        return className + "." + methodName + desc;
+    }
+
+    public String getOriginalDesc() {
+        return originalDesc;
     }
 }

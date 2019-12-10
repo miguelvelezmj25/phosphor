@@ -117,6 +117,8 @@ public class PreMain {
                     Configuration.ADDL_IGNORE = s.substring(7);
                 } else if(s.equals("withoutBranchNotTaken")) {
                     Configuration.WITHOUT_BRANCH_NOT_TAKEN = true;
+                } else if (s.equals("withCCSinks")) {
+                        Configuration.WITH_CC_SINKS = true;
                 } else if(s.startsWith(Instrumenter.opt_priorClassVisitor.getOpt() + "=")) {
                     String priorClassVisitorName = s.substring(Instrumenter.opt_priorClassVisitor.getOpt().length() + 1);
                     try {

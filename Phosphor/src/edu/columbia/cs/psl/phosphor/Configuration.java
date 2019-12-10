@@ -1,9 +1,7 @@
 package edu.columbia.cs.psl.phosphor;
 
-import edu.columbia.cs.psl.phosphor.instrumenter.DataAndControlFlowTagFactory;
-import edu.columbia.cs.psl.phosphor.instrumenter.TaintAdapter;
-import edu.columbia.cs.psl.phosphor.instrumenter.TaintTagFactory;
-import edu.columbia.cs.psl.phosphor.instrumenter.TaintTrackingClassVisitor;
+import edu.cmu.cs.mvelezce.cc.CCTaintSourceWrapper;
+import edu.columbia.cs.psl.phosphor.instrumenter.*;
 import edu.columbia.cs.psl.phosphor.runtime.DerivedTaintListener;
 import edu.columbia.cs.psl.phosphor.runtime.Taint;
 import edu.columbia.cs.psl.phosphor.runtime.TaintSourceWrapper;
@@ -16,6 +14,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 
+/**
+ * Modified for CC
+ */
 public class Configuration {
 
     public static final int ASM_VERSION = Opcodes.ASM7;
@@ -54,6 +55,7 @@ public class Configuration {
     public static boolean ALWAYS_CHECK_FOR_FRAMES = false;
     public static boolean REENABLE_CACHES = false;
     public static Class<? extends ClassVisitor> PRIOR_CLASS_VISITOR = null;
+    public static boolean WITH_CC_SINKS = false;
 
     public static Set<String> ignoredMethods = new HashSet<>();
     /*
@@ -64,7 +66,8 @@ public class Configuration {
     public static Class<? extends TaintAdapter> extensionMethodVisitor;
     public static Class<? extends ClassVisitor> extensionClassVisitor;
     public static TaintTagFactory taintTagFactory = new DataAndControlFlowTagFactory();
-    public static TaintSourceWrapper autoTainter = new TaintSourceWrapper();
+//    public static TaintSourceWrapper autoTainter = new TaintSourceWrapper();
+    public static TaintSourceWrapper autoTainter = new CCTaintSourceWrapper();
     public static DerivedTaintListener derivedTaintListener = new DerivedTaintListener();
     public static boolean WITH_HEAVY_OBJ_EQUALS_HASHCODE = false;
     public static String CACHE_DIR = null;

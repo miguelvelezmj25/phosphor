@@ -25,6 +25,10 @@ import static org.objectweb.asm.Opcodes.*;
  */
 public class PropagatingControlFlowDelegator implements ControlFlowDelegator {
 
+    private static final String CC_SINKS_CLASS = "edu/cmu/cs/mvelezce/cc/Sinks";
+    private static final String CC_SINKS_METHOD = "sink";
+    private static final String CC_SINKS_METHOD_RET = "(Ledu/columbia/cs/psl/phosphor/struct/ControlTaintTagStack;Ljava/lang/Object;Ljava/lang/String;)V";
+
     /**
      * Visitor to which instruction visiting is delegated.
      */
@@ -146,9 +150,11 @@ public class PropagatingControlFlowDelegator implements ControlFlowDelegator {
      */
     private boolean excludeNext = false;
 
+    private final TaintPassingMV taintPassingMV;
+
     public PropagatingControlFlowDelegator(MethodVisitor delegate, MethodVisitor passThroughDelegate, NeverNullArgAnalyzerAdapter analyzer,
                                            LocalVariableManager localVariableManager, PrimitiveArrayAnalyzer primitiveArrayAnalyzer,
-                                           String className, String methodName, int lastParameterIndex, Type[] paramTypes) {
+                                           String className, String methodName, int lastParameterIndex, Type[] paramTypes, TaintPassingMV taintPassingMV) {
         this.delegate = delegate;
         this.passThroughDelegate = passThroughDelegate;
         this.analyzer = analyzer;
@@ -166,6 +172,7 @@ public class PropagatingControlFlowDelegator implements ControlFlowDelegator {
         this.handlerScopeStart = addHandler ? new Label() : null;
         this.handlerScopeEnd = addHandler ? new Label() : null;
         this.handlerCodeStart = addHandler ? new Label() : null;
+        this.taintPassingMV = taintPassingMV;
     }
 
     @Override
@@ -647,6 +654,11 @@ public class PropagatingControlFlowDelegator implements ControlFlowDelegator {
             delegate.visitVarInsn(ALOAD, localVariableManager.getIdxOfMasterControlLV());
             delegate.visitInsn(SWAP);
             // T ControlTaintTagStack T
+
+            if(Configuration.WITH_CC_SINKS) {
+                this.addControlTrackingCCSink(delegate, this.taintPassingMV);
+            }
+
             delegate.visitVarInsn(ALOAD, indexOfBranchIDArray);
             push(delegate, info.branchID);
             push(delegate, numberOfBranchIDs);
@@ -797,5 +809,32 @@ public class PropagatingControlFlowDelegator implements ControlFlowDelegator {
             this.branchID = branchID;
             this.revisable = revisable;
         }
+    }
+
+    private void addControlTrackingCCSink(MethodVisitor methodVisitor, TaintPassingMV taintPassingMV) {
+        methodVisitor.visitInsn(Opcodes.DUP2);
+
+        String className = taintPassingMV.getClassName();
+        String methodDescription = this.removePhosphorAnnotation(taintPassingMV.getName()) + taintPassingMV.getOriginalDesc();
+        int index = this.getDecisionIndex(taintPassingMV);
+        String sinkId = className + "." + methodDescription + "." + index;
+
+        methodVisitor.visitLdcInsn(sinkId);
+        methodVisitor.visitMethodInsn(INVOKESTATIC, CC_SINKS_CLASS, CC_SINKS_METHOD, CC_SINKS_METHOD_RET, false);
+    }
+
+    private int getDecisionIndex(TaintPassingMV taintPassingMV) {
+        String classAndMethodName = TaintPassingMV.getClassAndMethodName(taintPassingMV.getClassName(), taintPassingMV.getName(), taintPassingMV.getOriginalDesc());
+        int index = TaintPassingMV.getMethodsToIfCounts().get(classAndMethodName);
+
+        if(index == 0) {
+            throw new RuntimeException("The count of if statements in " + classAndMethodName + " cannot be 0");
+        }
+
+        return index;
+    }
+
+    private String removePhosphorAnnotation(String string) {
+        return string.replace("$$PHOSPHORTAGGED", "").trim();
     }
 }

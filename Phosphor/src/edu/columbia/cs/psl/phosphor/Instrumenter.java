@@ -97,6 +97,9 @@ public class Instrumenter {
     static Option help = Option.builder("help")
             .desc("print this message")
             .build();
+    static Option opt_withCCSinks = Option.builder("withCCSinks")
+            .desc("Add ConfigCrusher sinks")
+            .build();
     private static ClassFileTransformer addlTransformer;
     private static File rootOutputDir;
     private static long START;
@@ -174,7 +177,8 @@ public class Instrumenter {
                 || (StringUtils.startsWith(owner, "java/lang/invoke/BoundMethodHandle") && !StringUtils.startsWith(owner, "java/lang/invoke/BoundMethodHandle$Factory"))
                 || StringUtils.startsWith(owner, "java/lang/invoke/DelegatingMethodHandle")
                 || owner.equals("java/lang/invoke/DirectMethodHandle")
-                || StringUtils.startsWith(owner, "java/util/function/Function");
+                || StringUtils.startsWith(owner, "java/util/function/Function")
+                || owner.startsWith("edu/cmu/cs/mvelezce/cc");
     }
 
     public static void analyzeClass(InputStream is) {
@@ -259,6 +263,7 @@ public class Instrumenter {
         options.addOption(opt_alwaysCheckForFrames);
         options.addOption(opt_priorClassVisitor);
         options.addOption(opt_reenableCaches);
+        options.addOption(opt_withCCSinks);
         CommandLineParser parser = new DefaultParser();
         CommandLine line;
         try {
@@ -293,6 +298,7 @@ public class Instrumenter {
         Configuration.WITHOUT_BRANCH_NOT_TAKEN = line.hasOption(opt_withoutBranchNotTaken.getOpt());
         Configuration.SKIP_LOCAL_VARIABLE_TABLE = line.hasOption(opt_disableLocalsInfo.getOpt());
         Configuration.ALWAYS_CHECK_FOR_FRAMES = line.hasOption(opt_alwaysCheckForFrames.getOpt());
+        Configuration.WITH_CC_SINKS = line.hasOption(opt_withCCSinks.getOpt());
         Configuration.IMPLICIT_HEADERS_NO_TRACKING = line.hasOption(opt_implicitHeadersNoTracking.getOpt());
         Configuration.BINDING_CONTROL_FLOWS_ONLY = line.hasOption(opt_bindingControl.getOpt());
         Configuration.REENABLE_CACHES = line.hasOption(opt_reenableCaches.getOpt());
@@ -321,6 +327,12 @@ public class Instrumenter {
             System.out.println("Branch not taken: disabled");
         } else {
             System.out.println("Branch not taken: enabled");
+        }
+        if(Configuration.WITH_CC_SINKS) {
+            System.out.println("Adding ConfigCrusher sinks");
+        }
+        if(Configuration.IMPLICIT_HEADERS_NO_TRACKING) {
+            System.out.println("Adding implicit headers, but not doing tracking in the body");
         }
 
         TaintTrackingClassVisitor.IS_RUNTIME_INST = false;

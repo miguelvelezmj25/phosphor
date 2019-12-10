@@ -507,6 +507,10 @@ public class TaintTrackingClassVisitor extends ClassVisitor {
         if((access & Opcodes.ACC_STATIC) == 0) {
             myFields.add(new FieldNode(access, name, desc, signature, value));
         }
+//        if(this.className.equals("java/lang/String") && name.equals("value")) {
+//            System.err.println("Miguel: why did we make the value field in String public?");
+//            return super.visitField(Opcodes.ACC_PUBLIC + Opcodes.ACC_FINAL, name ,desc, signature, value);
+//        }
         return super.visitField(access, name, desc, signature, value);
     }
 
