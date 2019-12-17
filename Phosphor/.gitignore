@@ -43,3 +43,5 @@ dependency-reduced-pom.xml
 
 
 
+/scripts/run-instrumented/implicit-optimized/index/
+**/data.ser
