@@ -1,3 +1,6 @@
-edu/cmu/cs/mvelezce/analysis/Nesting.main([Ljava/lang/String;)V.1
+edu/cmu/cs/mvelezce/analysis/Trivial.foo(Z)V.1
 
 0
+edu/cmu/cs/mvelezce/analysis/Trivial.bar(Z)V.1
+
+1

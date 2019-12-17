@@ -16,6 +16,7 @@ ARG12=${13}
 ARG13=${14}
 ARG14=${15}
 ARG15=${16}
+ARG16=${17}
 
 BASE=$(pwd)
 PROGRAM_JAR=$BASE/../../../examples/implicit-optimized/berkeleydb-1.0-SNAPSHOT.jar
@@ -40,8 +41,9 @@ function run {
     local arg12=${15}
     local arg13=${16}
     local arg14=${17}
+    local arg15=${18}
 
-    ../../../target/jre-inst-implicit-optimized/bin/java -Xmx12g -Xms12g -Xbootclasspath/a:../../../target/Phosphor-0.0.5-SNAPSHOT.jar -javaagent:../../../target/Phosphor-0.0.5-SNAPSHOT.jar -cp $program_jar $main_class $arg0 $arg1 $arg2 $arg3 $arg4 $arg5 $arg6 $arg7 $arg8 $arg9 $arg10 $arg11 $arg12 $arg13 $arg14
+    ../../../target/jre-inst-implicit-optimized/bin/java -Xmx28g -Xms28g -Xbootclasspath/a:../../../target/Phosphor-0.0.5-SNAPSHOT.jar -javaagent:../../../target/Phosphor-0.0.5-SNAPSHOT.jar -cp $program_jar $main_class $arg0 $arg1 $arg2 $arg3 $arg4 $arg5 $arg6 $arg7 $arg8 $arg9 $arg10 $arg11 $arg12 $arg13 $arg14 $arg15
 #    ../../../target/jre-inst-implicit-optimized/bin/java -Xmx12g -Xms12g -Xbootclasspath/a:../../../target/Phosphor-0.0.5-SNAPSHOT.jar -javaagent:../../../target/Phosphor-0.0.5-SNAPSHOT.jar -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -cp $program_jar $main_class $arg0 $arg1 $arg2 $arg3 $arg4 $arg5 $arg6 $arg7 $arg8 $arg9 $arg10 $arg11 $arg12 $arg13 $arg14
 
 #    ../../../target/jre-inst-implicit-optimized/bin/java -Xmx12g -Xms12g -XX:+UseConcMarkSweepGC -Xbootclasspath/a:../../../target/Phosphor-0.0.5-SNAPSHOT.jar -javaagent:../../../target/Phosphor-0.0.5-SNAPSHOT.jar=taintSources=../../../examples/implicit-optimized/berkeley-sources -cp $program_jar $main_class $arg0
@@ -52,5 +54,5 @@ rm -rf $BASE/../../../examples/implicit-optimized/$PROGRAM_NAME
 mkdir $BASE/../../../examples/implicit-optimized/$PROGRAM_NAME
 rm -rf tmp
 mkdir tmp
-time run $PROGRAM_JAR $MAIN_CLASS $ARG1 $ARG2 $ARG3 $ARG4 $ARG5 $ARG6 $ARG7 $ARG8 $ARG9 $ARG10 $ARG11 $ARG12 $ARG13 $ARG14 $ARG15
+time run $PROGRAM_JAR $MAIN_CLASS $ARG1 $ARG2 $ARG3 $ARG4 $ARG5 $ARG6 $ARG7 $ARG8 $ARG9 $ARG10 $ARG11 $ARG12 $ARG13 $ARG14 $ARG15 $ARG16
 rm -rf tmp
