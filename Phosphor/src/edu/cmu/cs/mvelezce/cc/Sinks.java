@@ -37,9 +37,7 @@ public class Sinks implements TaintedWithObjTag {
 
   public static void sink(
       ControlTaintTagStack controlTaintTagStack, Object taintedObject, String id) {
-    // TODO what about unsoundness of taint analysis? What if in other executions, the taint is not
-    // null
-    if (taintedObject == null /*&& controlTaintTagStack.isEmpty()*/) {
+    if (taintedObject == null && controlTaintTagStack.isEmpty()) {
       return;
     }
 
