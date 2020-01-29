@@ -37,7 +37,8 @@ public class Sinks implements TaintedWithObjTag {
 
   public static void sink(
       ControlTaintTagStack controlTaintTagStack, Object taintedObject, String id) {
-    if (taintedObject == null && controlTaintTagStack.isEmpty()) {
+    if (taintedObject == null /*&& controlTaintTagStack.isEmpty()*/) {
+      //    if (taintedObject == null && controlTaintTagStack.isEmpty()) {
       return;
     }
 
