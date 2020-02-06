@@ -12,6 +12,7 @@ import java.util.UUID;
 public class SinkManager {
 
   public static final String CC_STATIC_FIELD_PREFIX = "CC_SINK_";
+  public static final Map<String, String> CONTROL_STMTS_TO_FIELDS = new HashMap<>();
   private static final String CC_SINKS_CLASS = SinkManager.class.getName().replaceAll("\\.", "\\/");
   private static final String CC_SINKS_METHOD = "sink";
   private static final String PHOSPHOR_SET_CLASS_DESC = "Ljava/util/Set;";
@@ -25,10 +26,7 @@ public class SinkManager {
   private static final String GET_SINK_DATA_METHOD_NAME = "getSinkData";
   private static final String GET_SINK_DATA_METHOD_DESC =
       "(Ledu/columbia/cs/psl/phosphor/control/standard/StandardControlFlowStack;Ledu/columbia/cs/psl/phosphor/runtime/Taint;)Ledu/cmu/cs/mvelezce/cc/control/sink/SinkData;";
-
   private static final Map<String, Integer> CONTROL_STMTS_TO_COUNT = new HashMap<>();
-  private static final Map<String, String> CONTROL_STMTS_TO_FIELDS = new HashMap<>();
-
   private static String className = null;
   private static String methodName = null;
   private static String desc = null;
@@ -116,6 +114,7 @@ public class SinkManager {
 
   public static <T> SinkData<T> getSinkData(
       StandardControlFlowStack<T> stack, Taint<T> dataTaints) {
+    // Should we cache these taints?
     return new SinkData<T>(stack.copyTag(), dataTaints);
   }
 
