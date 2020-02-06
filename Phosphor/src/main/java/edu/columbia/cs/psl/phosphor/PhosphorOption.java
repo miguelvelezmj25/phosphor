@@ -15,6 +15,13 @@ import java.io.FileNotFoundException;
 
 public enum PhosphorOption {
 
+    WITH_CC_SINKS(new PhosphorOptionBuilder("Add sinks for CC analysis", true, false)
+            .alternativeName("withCCSinks")) {
+        @Override
+        public void configure(boolean forRuntimeInst, boolean isPresent, CommandLine commandLine) {
+            Configuration.WITH_CC_SINKS = isPresent;
+        }
+    },
     WITHOUT_DATA_TRACK(new PhosphorOptionBuilder("Disable taint tracking through data flow (on by default)",
             true, false)) {
         @Override

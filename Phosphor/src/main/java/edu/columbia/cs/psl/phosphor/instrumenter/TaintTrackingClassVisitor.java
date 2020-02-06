@@ -1,5 +1,6 @@
 package edu.columbia.cs.psl.phosphor.instrumenter;
 
+import edu.cmu.cs.mvelezce.cc.instrumenter.CCTaintPassingMV;
 import edu.columbia.cs.psl.phosphor.Configuration;
 import edu.columbia.cs.psl.phosphor.Instrumenter;
 import edu.columbia.cs.psl.phosphor.TaintUtils;
@@ -455,7 +456,14 @@ public class TaintTrackingClassVisitor extends ClassVisitor {
             ReflectionHidingMV reflectionMasker = new ReflectionHidingMV(next, className, name, isEnum);
             PrimitiveBoxingFixer boxFixer = new PrimitiveBoxingFixer(access, className, name, desc, signature, exceptions, reflectionMasker, analyzer);
 
-            TaintPassingMV tmv = new TaintPassingMV(boxFixer, access, className, name, newDesc, signature, exceptions, desc, analyzer, rootmV, wrapperMethodsToAdd, controlFlowPolicy);
+            TaintPassingMV tmv;
+
+            if(Configuration.WITH_CC_SINKS) {
+                tmv = new CCTaintPassingMV(boxFixer, access, className, name, newDesc, signature, exceptions, desc, analyzer, rootmV, wrapperMethodsToAdd, controlFlowPolicy, originalName);
+            } else {
+                tmv = new TaintPassingMV(boxFixer, access, className, name, newDesc, signature, exceptions, desc, analyzer, rootmV, wrapperMethodsToAdd, controlFlowPolicy);
+            }
+
             tmv.setFields(fields);
 
             ReflectionHidingMV uninstReflectionMasker = new ReflectionHidingMV(mv, className, name, isEnum);

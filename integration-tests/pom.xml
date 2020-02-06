@@ -11,15 +11,17 @@
     </parent>
     <properties>
         <dacapo.skip>true</dacapo.skip>
-        <skipDataFlowTests>false</skipDataFlowTests>
-        <skipControlFlowTests>false</skipControlFlowTests>
+        <skipDataFlowTests>true</skipDataFlowTests>
+        <skipControlFlowTests>true</skipControlFlowTests>
         <auto.taint>
             taintSources=${basedir}/src/test/resources/taint-sources,taintSinks=${basedir}/src/test/resources/taint-sinks,taintThrough=${basedir}/src/test/resources/taint-through
         </auto.taint>
         <data.flow.cache>${project.build.directory}/cached-data-flows</data.flow.cache>
         <control.flow.cache>${project.build.directory}/cached-control-flows</control.flow.cache>
+        <optimized.control.flow.cache>${project.build.directory}/cached-optimized-control-flows</optimized.control.flow.cache>
         <data.flow.jvm>jvm-inst-data</data.flow.jvm>
         <control.flow.jvm>jvm-inst-control</control.flow.jvm>
+        <optimized.control.flow.jvm>jvm-inst-optimized-control</optimized.control.flow.jvm>
     </properties>
     <build>
         <plugins>
@@ -76,6 +78,28 @@
                             </options>
                             <associatedCaches>
                                 <associatedCache>${control.flow.cache}</associatedCache>
+                            </associatedCaches>
+                            <reinstrumentBasedOnChecksum>false</reinstrumentBasedOnChecksum>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>optimized-control-flows</id>
+                        <goals>
+                            <goal>instrument</goal>
+                        </goals>
+                        <phase>none</phase>
+                        <configuration>
+                            <targetName>${optimized.control.flow.jvm}</targetName>
+                            <options>
+                                <!--                                <implicitHeadersNoTracking/>-->
+                                <withCCSinks/>
+                                <withoutBranchNotTaken/>
+                                <forceUnboxAcmpEq/>
+                                <withEnumsByValue/>
+                                <quiet/>
+                            </options>
+                            <associatedCaches>
+                                <associatedCache>${optimized.control.flow.cache}</associatedCache>
                             </associatedCaches>
                             <reinstrumentBasedOnChecksum>false</reinstrumentBasedOnChecksum>
                         </configuration>
@@ -172,6 +196,10 @@
                             </execution>
                             <execution>
                                 <id>control-flows</id>
+                                <phase>process-test-resources</phase>
+                            </execution>
+                            <execution>
+                                <id>optimized-control-flows</id>
                                 <phase>process-test-resources</phase>
                             </execution>
                         </executions>
