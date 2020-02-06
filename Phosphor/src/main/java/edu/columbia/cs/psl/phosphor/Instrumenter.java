@@ -120,7 +120,8 @@ public class Instrumenter {
                 || (StringUtils.startsWith(owner, "java/lang/invoke/BoundMethodHandle") && !StringUtils.startsWith(owner, "java/lang/invoke/BoundMethodHandle$Factory"))
                 || StringUtils.startsWith(owner, "java/lang/invoke/DelegatingMethodHandle")
                 || owner.equals("java/lang/invoke/DirectMethodHandle")
-                || StringUtils.startsWith(owner, "java/util/function/Function");
+                || StringUtils.startsWith(owner, "java/util/function/Function")
+                || owner.startsWith("edu/cmu/cs/mvelezce/cc");
     }
 
     public static void analyzeClass(InputStream is) {
@@ -200,6 +201,9 @@ public class Instrumenter {
             System.out.println("Branch not taken: disabled");
         } else {
             System.out.println("Branch not taken: enabled");
+        }
+        if(Configuration.WITH_CC_SINKS) {
+            System.out.println("Adding CC sinks");
         }
         TaintTrackingClassVisitor.IS_RUNTIME_INST = false;
         ANALYZE_ONLY = true;
@@ -308,7 +312,13 @@ public class Instrumenter {
             System.exit(-1);
         }
 
-        final ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        final ExecutorService executor;
+
+        if(Configuration.WITH_CC_SINKS) {
+            executor = Executors.newFixedThreadPool(1);
+        } else {
+            executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        }
         LinkedList<Future> toWait = new LinkedList<>();
 
         if(f.isDirectory()) {
