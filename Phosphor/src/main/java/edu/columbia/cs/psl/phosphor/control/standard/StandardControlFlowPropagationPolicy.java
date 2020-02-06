@@ -1,5 +1,6 @@
 package edu.columbia.cs.psl.phosphor.control.standard;
 
+import edu.cmu.cs.mvelezce.cc.control.sink.SinkManager;
 import edu.columbia.cs.psl.phosphor.Configuration;
 import edu.columbia.cs.psl.phosphor.PhosphorInstructionInfo;
 import edu.columbia.cs.psl.phosphor.TaintUtils;
@@ -264,6 +265,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
             delegate.visitVarInsn(ALOAD, localVariableManager.getIndexOfMasterControlLV());
             delegate.visitInsn(SWAP);
             // T ControlFlowStack T
+            if(Configuration.WITH_CC_SINKS) {
+                SinkManager.addCCSink(delegate);
+            }
             delegate.visitVarInsn(ALOAD, pushedBranchesIndex);
             push(delegate, nextBranchID);
             push(delegate, numberOfUniqueBranchIDs);
