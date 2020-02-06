@@ -1,5 +1,6 @@
 package edu.columbia.cs.psl.phosphor;
 
+import edu.cmu.cs.mvelezce.cc.instrumenter.CCFieldAdderClassVisitor;
 import edu.columbia.cs.psl.phosphor.control.ControlFlowStack;
 import edu.columbia.cs.psl.phosphor.instrumenter.*;
 import edu.columbia.cs.psl.phosphor.instrumenter.asm.OffsetPreservingClassReader;
@@ -172,6 +173,12 @@ public class PreMain {
                     _cv = new HidePhosphorFromASMCV(_cv, upgradeVersion);
                     cr.accept(_cv, ClassReader.EXPAND_FRAMES);
                     byte[] instrumentedBytes = cw.toByteArray();
+
+                    ClassWriter ccCW = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+                    ClassReader ccCR = new ClassReader(instrumentedBytes);
+                    ccCR.accept(new CCFieldAdderClassVisitor(ccCW, className), ClassReader.EXPAND_FRAMES);
+                    instrumentedBytes = ccCW.toByteArray();
+
                     if (!traceClass && (DEBUG || TaintUtils.VERIFY_CLASS_GENERATION)) {
                         ClassReader cr2 = new ClassReader(instrumentedBytes);
                         cr2.accept(new CheckClassAdapter(new ClassWriter(0), true), ClassReader.EXPAND_FRAMES);
