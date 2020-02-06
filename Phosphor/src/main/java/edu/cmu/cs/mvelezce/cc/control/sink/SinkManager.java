@@ -11,16 +11,15 @@ import java.util.UUID;
 
 public class SinkManager {
 
+  public static final boolean USE_PHOSPHOR_UTILS = true;
   public static final String CC_STATIC_FIELD_PREFIX = "CC_SINK_";
   public static final Map<String, String> CONTROL_STMTS_TO_FIELDS = new HashMap<>();
+  public static final String SET_CLASS_SIGNATURE_FOR_FIELD = getSetClassSignatureForField();
+  public static final String SET_CLASS_DESC_FOR_FIELD = getSetClassDescForField();
+  public static final String SET_CLASS_NAME = getSetClassName();
+  public static final String HASHSET_CLASS_NAME = getHashSetClassName();
+
   private static final String CC_SINKS_CLASS = SinkManager.class.getName().replaceAll("\\.", "\\/");
-  private static final String CC_SINKS_METHOD = "sink";
-  private static final String PHOSPHOR_SET_CLASS_DESC = "Ljava/util/Set;";
-  //  private static final String PHOSPHOR_SET_CLASS_DESC =
-  //      "Ledu/columbia/cs/psl/phosphor/struct/harmony/util/Set;";
-  private static final String PHOSPHOR_SET_CLASS_NAME = "java/util/Set";
-  //  private static final String PHOSPHOR_SET_CLASS_NAME =
-  //      "edu/columbia/cs/psl/phosphor/struct/harmony/util/Set";
   private static final String PHOSPHOR_SET_ADD_METHOD_NAME = "add";
   private static final String PHOSPHOR_SET_ADD_METHOD_DESC = "(Ljava/lang/Object;)Z";
   private static final String GET_SINK_DATA_METHOD_NAME = "getSinkData";
@@ -32,10 +31,38 @@ public class SinkManager {
   private static String desc = null;
   private static int index = -1;
 
-  private final boolean delme;
+  private SinkManager() {}
 
-  private SinkManager() {
-    this.delme = true;
+  private static String getHashSetClassName() {
+    if (USE_PHOSPHOR_UTILS) {
+      return "edu/columbia/cs/psl/phosphor/struct/harmony/util/HashSet";
+    }
+
+    return "java/util/HashSet";
+  }
+
+  private static String getSetClassName() {
+    if (USE_PHOSPHOR_UTILS) {
+      return "edu/columbia/cs/psl/phosphor/struct/harmony/util/Set";
+    }
+
+    return "java/util/Set";
+  }
+
+  private static String getSetClassDescForField() {
+    if (USE_PHOSPHOR_UTILS) {
+      return "Ledu/columbia/cs/psl/phosphor/struct/harmony/util/Set;";
+    }
+
+    return "Ljava/util/Set;";
+  }
+
+  private static String getSetClassSignatureForField() {
+    if (USE_PHOSPHOR_UTILS) {
+      return "Ledu/columbia/cs/psl/phosphor/struct/harmony/util/Set<Ledu/cmu/cs/mvelezce/cc/control/sink/SinkData<Ljava/lang/Integer;>;>;";
+    }
+
+    return "Ljava/util/Set<Ledu/cmu/cs/mvelezce/cc/control/sink/SinkData<Ljava/lang/Integer;>;>;";
   }
 
   public static void preProcessSinks(String programName) {
@@ -82,11 +109,11 @@ public class SinkManager {
         GET_SINK_DATA_METHOD_DESC,
         false);
     methodVisitor.visitFieldInsn(
-        Opcodes.GETSTATIC, SinkManager.className, getFieldName(), PHOSPHOR_SET_CLASS_DESC);
+        Opcodes.GETSTATIC, SinkManager.className, getFieldName(), SET_CLASS_DESC_FOR_FIELD);
     methodVisitor.visitInsn(Opcodes.SWAP);
     methodVisitor.visitMethodInsn(
         Opcodes.INVOKEINTERFACE,
-        PHOSPHOR_SET_CLASS_NAME,
+        SET_CLASS_NAME,
         PHOSPHOR_SET_ADD_METHOD_NAME,
         PHOSPHOR_SET_ADD_METHOD_DESC,
         true);
@@ -109,7 +136,11 @@ public class SinkManager {
     String sink = controlStmt + SinkManager.index;
     CONTROL_STMTS_TO_FIELDS.put(sink, UUID.randomUUID().toString().replaceAll("-", "_"));
 
-    return CC_STATIC_FIELD_PREFIX + CONTROL_STMTS_TO_FIELDS.get(sink);
+    return getFieldName(CONTROL_STMTS_TO_FIELDS.get(sink));
+  }
+
+  public static String getFieldName(String id) {
+    return CC_STATIC_FIELD_PREFIX + id;
   }
 
   public static <T> SinkData<T> getSinkData(
