@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.cmu.cs.mvelezce.cc.instrumenter.ControlStmt;
 import edu.cmu.cs.mvelezce.cc.instrumenter.Method;
 import edu.columbia.cs.psl.phosphor.Configuration;
+import edu.columbia.cs.psl.phosphor.PreMain;
 import edu.columbia.cs.psl.phosphor.control.standard.StandardControlFlowStack;
 import edu.columbia.cs.psl.phosphor.runtime.Taint;
 import org.objectweb.asm.MethodVisitor;
@@ -11,6 +12,7 @@ import org.objectweb.asm.Opcodes;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.*;
 
 public class SinkManager {
@@ -34,7 +36,9 @@ public class SinkManager {
   private static Method currentMethod;
   private static int index = -1;
 
-  private SinkManager() { }
+  private SinkManager() {
+    System.out.println();
+  }
 
   private static String getHashSetClassName() {
     if (USE_PHOSPHOR_UTILS) {
@@ -72,21 +76,30 @@ public class SinkManager {
     System.out.println(programName);
   }
 
-  public static void postProcessSinks() {
-    long start = System.nanoTime();
+  /** Execution */
+  public static <T> void postProcessSinks() {
+    try {
+      long start = System.nanoTime();
+      Class[] classes = PreMain.getInstrumentation().getAllLoadedClasses();
 
-    //    try {
-    //      Field field = ClassLoader.class.getDeclaredField("classes");
-    //      field.setAccessible(true);
-    //
-    //      ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-    //      List<Class> classes = (List<Class>) field.get(classLoader);
-    //      System.out.println();
-    //    } catch (NoSuchFieldException | IllegalAccessException e) {
-    //      throw new RuntimeException(e);
-    //    }
+      for (Class clazz : classes) {
+        // TODO might be able to not look at some classes here
+        Field[] fields = clazz.getFields();
 
-    System.out.println("Sink processing took " + (System.nanoTime() - start) / 1E9 + " s");
+        for (Field field : fields) {
+          if (!field.getName().startsWith(CC_STATIC_FIELD_PREFIX)) {
+            continue;
+          }
+
+          edu.columbia.cs.psl.phosphor.struct.harmony.util.Set<SinkData<T>> data =
+              (edu.columbia.cs.psl.phosphor.struct.harmony.util.Set<SinkData<T>>) field.get(null);
+        }
+      }
+
+      System.out.println("Sink processing took " + (System.nanoTime() - start) / 1E9 + " s");
+    } catch (IllegalAccessException iae) {
+      throw new RuntimeException(iae);
+    }
   }
 
   public static void setCurrentMethod(String className, String methodName, String desc) {
@@ -152,7 +165,7 @@ public class SinkManager {
 
   public static <T> SinkData<T> getSinkData(
       StandardControlFlowStack<T> stack, Taint<T> dataTaints) {
-    // Should we cache these taints?
+    // TODO Should we cache these taints?
     return new SinkData<T>(stack.copyTag(), dataTaints);
   }
 
@@ -194,7 +207,7 @@ public class SinkManager {
   //      // TODO throw error that the taint cannot be written.
   //    }
   //  }
-
+  //
   //  private void writeTaints(Object taintedObject) throws IOException {
   //    if (taintedObject == null) {
   //      this.fos.write(EMPTY);
@@ -208,7 +221,7 @@ public class SinkManager {
   //      //      this.fos.write(EMPTY);
   //    }
   //  }
-
+  //
   //  private static <T> void processTaintLabels(Taint<T> taint) {
   //    if (taint == null) {
   //      //      this.fos.write(EMPTY);
