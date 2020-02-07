@@ -38,10 +38,9 @@ function inst() {
   local jar=$2
   local dir=$3
 
-  java -Xmx10g -jar $phosphor_jar -withCCSinks -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
+  java -Xmx10g -jar $phosphor_jar -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
+#  java -Xmx10g -jar $phosphor_jar -withCCSinks -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
   #    java -Xmx10g -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar $phosphor_jar -withCCSinks -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
-
-  #  java -Xmx10g -jar $phosphor_jar -priorClassVisitor edu.cmu.cs.mvelezce.cc.instrumenter.CCStaticFieldAdderClassVisitor -controlFlowManager edu.cmu.cs.mvelezce.cc.control.CCStandardControlFlowManager -withCCSinks -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
 }
 
 (
