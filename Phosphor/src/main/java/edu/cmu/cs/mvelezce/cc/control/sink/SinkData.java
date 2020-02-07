@@ -2,6 +2,7 @@ package edu.cmu.cs.mvelezce.cc.control.sink;
 
 import edu.columbia.cs.psl.phosphor.runtime.Taint;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class SinkData<T> {
@@ -36,5 +37,12 @@ public class SinkData<T> {
     int result = control != null ? control.hashCode() : 0;
     result = 31 * result + (data != null ? data.hashCode() : 0);
     return result;
+  }
+
+  @Override
+  public String toString() {
+    return Arrays.toString(this.control.getLabels())
+        + " - "
+        + Arrays.toString(this.data.getLabels());
   }
 }
