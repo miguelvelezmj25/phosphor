@@ -91,11 +91,11 @@
                         <configuration>
                             <targetName>${optimized.control.flow.jvm}</targetName>
                             <options>
-                                <!--                                <implicitHeadersNoTracking/>-->
-                                <withCCSinks/>
+                                <implicitHeadersNoTracking/>
                                 <withoutBranchNotTaken/>
                                 <forceUnboxAcmpEq/>
                                 <withEnumsByValue/>
+                                <serialization/>
                                 <quiet/>
                             </options>
                             <associatedCaches>

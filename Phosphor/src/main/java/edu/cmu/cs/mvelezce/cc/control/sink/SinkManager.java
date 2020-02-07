@@ -31,7 +31,7 @@ public class SinkManager {
   private static String desc = null;
   private static int index = -1;
 
-  private SinkManager() {}
+  private SinkManager() { }
 
   private static String getHashSetClassName() {
     if (USE_PHOSPHOR_UTILS) {
@@ -70,7 +70,20 @@ public class SinkManager {
   }
 
   public static void postProcessSinks() {
-    System.out.println("post");
+    long start = System.nanoTime();
+
+    //    try {
+    //      Field field = ClassLoader.class.getDeclaredField("classes");
+    //      field.setAccessible(true);
+    //
+    //      ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+    //      List<Class> classes = (List<Class>) field.get(classLoader);
+    //      System.out.println();
+    //    } catch (NoSuchFieldException | IllegalAccessException e) {
+    //      throw new RuntimeException(e);
+    //    }
+
+    System.out.println("Sink processing took " + (System.nanoTime() - start) / 1E9 + " s");
   }
 
   public static void setCurrentMethod(String className, String methodName, String desc) {
