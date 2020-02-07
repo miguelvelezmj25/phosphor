@@ -40,7 +40,7 @@ public class CCFieldAdderClassVisitor extends ClassVisitor {
       }
 
       super.visitField(
-          Opcodes.ACC_PRIVATE + Opcodes.ACC_STATIC + Opcodes.ACC_FINAL,
+          Opcodes.ACC_PUBLIC + Opcodes.ACC_STATIC + Opcodes.ACC_FINAL,
           SinkManager.getFieldName(entry.getValue()),
           SinkManager.SET_CLASS_DESC_FOR_FIELD,
           SinkManager.SET_CLASS_SIGNATURE_FOR_FIELD,
