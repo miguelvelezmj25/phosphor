@@ -59,6 +59,7 @@ public class Configuration {
     public static ControlFlowManager controlFlowManager;
     public static boolean QUIET_MODE = false;
     public static boolean WITH_CC_SINKS = false;
+    public static String PROGRAM_NAME = null;
 
     public static Set<String> ignoredMethods = new HashSet<>();
     /*

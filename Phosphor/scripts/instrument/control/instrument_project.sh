@@ -2,6 +2,7 @@
 
 DIR=${1}
 JAR_NAME=${2}
+PROGRAM_NAME=${3}
 
 BASE=$(pwd)
 BASE=$BASE/../../..
@@ -37,14 +38,15 @@ function inst() {
   local phosphor_jar=$1
   local jar=$2
   local dir=$3
+  local programName=$4
 
-  java -Xmx10g -jar $phosphor_jar -withCCSinks -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
-  #  java -Xmx10g -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar $phosphor_jar -withCCSinks -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
+  java -Xmx10g -jar $phosphor_jar -withCCSinks $programName -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
+  #  java -Xmx10g -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar $phosphor_jar -withCCSinks $programName -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir $programName
 }
 
 (
   cd $DIR
   rm_phosphor_dir $INST_DIR
   mkdir_phosphor $INST_DIR
-  inst $PHOSPHOR_JAR $JAR_NAME $INST_DIR
+  inst $PHOSPHOR_JAR $JAR_NAME $INST_DIR $PROGRAM_NAME
 )
