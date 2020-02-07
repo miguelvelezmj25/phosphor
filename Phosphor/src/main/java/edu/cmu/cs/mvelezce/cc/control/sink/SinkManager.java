@@ -1,5 +1,7 @@
 package edu.cmu.cs.mvelezce.cc.control.sink;
 
+import edu.cmu.cs.mvelezce.cc.instrumenter.ControlStmt;
+import edu.cmu.cs.mvelezce.cc.instrumenter.Method;
 import edu.columbia.cs.psl.phosphor.control.standard.StandardControlFlowStack;
 import edu.columbia.cs.psl.phosphor.runtime.Taint;
 import org.objectweb.asm.MethodVisitor;
@@ -13,7 +15,7 @@ public class SinkManager {
 
   public static final boolean USE_PHOSPHOR_UTILS = true;
   public static final String CC_STATIC_FIELD_PREFIX = "CC_SINK_";
-  public static final Map<String, String> CONTROL_STMTS_TO_FIELDS = new HashMap<>();
+  public static final Map<ControlStmt, String> CONTROL_STMTS_TO_FIELDS = new HashMap<>();
   public static final String SET_CLASS_SIGNATURE_FOR_FIELD = getSetClassSignatureForField();
   public static final String SET_CLASS_DESC_FOR_FIELD = getSetClassDescForField();
   public static final String SET_CLASS_NAME = getSetClassName();
@@ -25,10 +27,9 @@ public class SinkManager {
   private static final String GET_SINK_DATA_METHOD_NAME = "getSinkData";
   private static final String GET_SINK_DATA_METHOD_DESC =
       "(Ledu/columbia/cs/psl/phosphor/control/standard/StandardControlFlowStack;Ledu/columbia/cs/psl/phosphor/runtime/Taint;)Ledu/cmu/cs/mvelezce/cc/control/sink/SinkData;";
-  private static final Map<String, Integer> CONTROL_STMTS_TO_COUNT = new HashMap<>();
-  private static String className = null;
-  private static String methodName = null;
-  private static String desc = null;
+  private static final Map<Method, Integer> METHODS_TO_CONTROL_COUNTS = new HashMap<>();
+
+  private static Method currentMethod;
   private static int index = -1;
 
   private SinkManager() { }
@@ -87,18 +88,9 @@ public class SinkManager {
   }
 
   public static void setCurrentMethod(String className, String methodName, String desc) {
-    SinkManager.className = className;
-    SinkManager.methodName = methodName;
-    SinkManager.desc = desc;
-
-    String controlStmt = getFullyQualifiedMethodName(className, methodName, desc);
-    CONTROL_STMTS_TO_COUNT.put(controlStmt, 0);
-    SinkManager.index = CONTROL_STMTS_TO_COUNT.get(controlStmt);
-  }
-
-  private static String getFullyQualifiedMethodName(
-      String className, String methodName, String desc) {
-    return className + "." + methodName + desc;
+    SinkManager.currentMethod = new Method(className, methodName, desc);
+    METHODS_TO_CONTROL_COUNTS.putIfAbsent(SinkManager.currentMethod, 0);
+    SinkManager.index = METHODS_TO_CONTROL_COUNTS.get(SinkManager.currentMethod);
   }
 
   /**
@@ -107,10 +99,7 @@ public class SinkManager {
    * @param methodVisitor
    */
   public static void addCCSink(MethodVisitor methodVisitor) {
-    if (SinkManager.className == null
-        || SinkManager.methodName == null
-        || SinkManager.desc == null
-        || SinkManager.index < 0) {
+    if (SinkManager.currentMethod == null || SinkManager.index < 0) {
       throw new RuntimeException("We do not know the method that we are instrumenting");
     }
 
@@ -122,7 +111,10 @@ public class SinkManager {
         GET_SINK_DATA_METHOD_DESC,
         false);
     methodVisitor.visitFieldInsn(
-        Opcodes.GETSTATIC, SinkManager.className, getFieldName(), SET_CLASS_DESC_FOR_FIELD);
+        Opcodes.GETSTATIC,
+        SinkManager.currentMethod.getClassName(),
+        getFieldName(),
+        SET_CLASS_DESC_FOR_FIELD);
     methodVisitor.visitInsn(Opcodes.SWAP);
     methodVisitor.visitMethodInsn(
         Opcodes.INVOKEINTERFACE,
@@ -132,24 +124,24 @@ public class SinkManager {
         true);
     methodVisitor.visitInsn(Opcodes.POP);
 
-    SinkManager.className = null;
-    SinkManager.methodName = null;
-    SinkManager.desc = null;
+    SinkManager.currentMethod = null;
     SinkManager.index = -1;
   }
 
   private static String getFieldName() {
-    String controlStmt =
-        getFullyQualifiedMethodName(
-            SinkManager.className, SinkManager.methodName, SinkManager.desc);
-    int currentIndex = CONTROL_STMTS_TO_COUNT.get(controlStmt);
+    int currentIndex = METHODS_TO_CONTROL_COUNTS.get(SinkManager.currentMethod);
     currentIndex++;
-    CONTROL_STMTS_TO_COUNT.put(controlStmt, currentIndex);
+    METHODS_TO_CONTROL_COUNTS.put(SinkManager.currentMethod, currentIndex);
 
-    String sink = controlStmt + SinkManager.index;
-    CONTROL_STMTS_TO_FIELDS.put(sink, UUID.randomUUID().toString().replaceAll("-", "_"));
+    ControlStmt controlStmt =
+        new ControlStmt(
+            SinkManager.currentMethod.getClassName(),
+            SinkManager.currentMethod.getMethodName(),
+            SinkManager.currentMethod.getDesc(),
+            SinkManager.index);
+    CONTROL_STMTS_TO_FIELDS.put(controlStmt, UUID.randomUUID().toString().replaceAll("-", "_"));
 
-    return getFieldName(CONTROL_STMTS_TO_FIELDS.get(sink));
+    return getFieldName(CONTROL_STMTS_TO_FIELDS.get(controlStmt));
   }
 
   public static String getFieldName(String id) {
