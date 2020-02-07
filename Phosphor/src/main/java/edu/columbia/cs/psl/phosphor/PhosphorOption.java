@@ -16,10 +16,15 @@ import java.io.FileNotFoundException;
 public enum PhosphorOption {
 
     WITH_CC_SINKS(new PhosphorOptionBuilder("Add sinks for CC analysis", true, false)
-            .alternativeName("withCCSinks")) {
+            .alternativeName("withCCSinks").argType(String.class)) {
         @Override
         public void configure(boolean forRuntimeInst, boolean isPresent, CommandLine commandLine) {
-            Configuration.WITH_CC_SINKS = isPresent;
+            try {
+                Configuration.WITH_CC_SINKS = isPresent;
+                Configuration.PROGRAM_NAME = (String) commandLine.getParsedOptionValue(optionName);
+            } catch(ParseException e) {
+                System.err.println("Failed to parse the programName");
+            }
         }
     },
     WITHOUT_DATA_TRACK(new PhosphorOptionBuilder("Disable taint tracking through data flow (on by default)",
