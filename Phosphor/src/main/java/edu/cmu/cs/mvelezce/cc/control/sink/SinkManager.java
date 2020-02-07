@@ -1,15 +1,17 @@
 package edu.cmu.cs.mvelezce.cc.control.sink;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.cmu.cs.mvelezce.cc.instrumenter.ControlStmt;
 import edu.cmu.cs.mvelezce.cc.instrumenter.Method;
+import edu.columbia.cs.psl.phosphor.Configuration;
 import edu.columbia.cs.psl.phosphor.control.standard.StandardControlFlowStack;
 import edu.columbia.cs.psl.phosphor.runtime.Taint;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
 
 public class SinkManager {
 
@@ -154,30 +156,30 @@ public class SinkManager {
     return new SinkData<T>(stack.copyTag(), dataTaints);
   }
 
-  // /** Instrument */
-  // public static void saveControlFlowStmts() {
-  //    long start = System.currentTimeMillis();
-  //    Set<SinkInfo> sinkInfos = new HashSet<>();
-  //
-  //    for (int i = 0; i < STMTS.size(); i++) {
-  //      SinkInfo sinkInfo = new SinkInfo(i, STMTS.get(i));
-  //      sinkInfos.add(sinkInfo);
-  //    }
-  //
-  //    try {
-  //      File outputFile =
-  //          new File(
-  //
-  // "/Users/mvelezce/Documents/programming/java/projects/phosphor/Phosphor/examples/control/stmts.json");
-  //      ObjectMapper mapper = new ObjectMapper();
-  //      mapper.writeValue(outputFile, sinkInfos);
-  //    } catch (IOException ioe) {
-  //      throw new RuntimeException(ioe);
-  //    }
-  //
-  //    long end = System.currentTimeMillis();
-  //    System.out.println("Done saving stmts after " + (end - start) + " ms");
-  // }
+  public static void saveControlStmts() {
+    long start = System.currentTimeMillis();
+    Set<ControlStmtField> controlStmtFields = new HashSet<>();
+
+    for (Map.Entry<ControlStmt, String> entry : CONTROL_STMTS_TO_FIELDS.entrySet()) {
+      ControlStmtField controlStmtField = new ControlStmtField(entry.getKey(), entry.getValue());
+      controlStmtFields.add(controlStmtField);
+    }
+
+    try {
+      File outputFile =
+          new File(
+              "/Users/mvelezce/Documents/programming/java/projects/phosphor/Phosphor/scripts/instrument/control/"
+                  + Configuration.PROGRAM_NAME
+                  + ".json");
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.writeValue(outputFile, controlStmtFields);
+    } catch (IOException ioe) {
+      throw new RuntimeException(ioe);
+    }
+
+    long end = System.currentTimeMillis();
+    System.out.println("Done saving stmts after " + (end - start) + " ms");
+  }
 
   //  synchronized void checkTaint(
   //          ControlTaintTagStack controlTaintTagStack, Object taintedObject, String id) {

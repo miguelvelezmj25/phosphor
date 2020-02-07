@@ -1,5 +1,6 @@
 package edu.columbia.cs.psl.phosphor;
 
+import edu.cmu.cs.mvelezce.cc.control.sink.SinkManager;
 import edu.columbia.cs.psl.phosphor.instrumenter.TaintTrackingClassVisitor;
 import edu.columbia.cs.psl.phosphor.runtime.StringUtils;
 import edu.columbia.cs.psl.phosphor.struct.harmony.util.*;
@@ -227,6 +228,10 @@ public class Instrumenter {
         ANALYZE_ONLY = false;
         _main(line.getArgs());
         System.out.println("Done after " + (System.currentTimeMillis() - START) + " ms");
+
+        if(Configuration.WITH_CC_SINKS) {
+            SinkManager.saveControlStmts();
+        }
     }
 
     public static void _main(String[] args) {
