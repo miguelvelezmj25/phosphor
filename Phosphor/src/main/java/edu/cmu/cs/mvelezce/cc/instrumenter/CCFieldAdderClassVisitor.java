@@ -32,10 +32,10 @@ public class CCFieldAdderClassVisitor extends ClassVisitor {
 
   @Override
   public void visitEnd() {
-    for (Map.Entry<String, String> entry : SinkManager.CONTROL_STMTS_TO_FIELDS.entrySet()) {
-      String sink = entry.getKey();
+    for (Map.Entry<ControlStmt, String> entry : SinkManager.CONTROL_STMTS_TO_FIELDS.entrySet()) {
+      ControlStmt sink = entry.getKey();
 
-      if (!sink.startsWith(this.className)) {
+      if (!sink.getClassName().equals(this.className)) {
         continue;
       }
 
