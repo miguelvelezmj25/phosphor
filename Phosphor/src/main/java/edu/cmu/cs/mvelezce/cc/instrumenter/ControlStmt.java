@@ -7,6 +7,13 @@ public class ControlStmt {
   private final String desc;
   private final int index;
 
+  private ControlStmt() {
+    this.className = "";
+    this.methodName = "";
+    this.desc = "";
+    this.index = -1;
+  }
+
   public ControlStmt(String className, String methodName, String desc, int index) {
     this.className = className;
     this.methodName = methodName;
