@@ -1,1 +1,3377 @@
-[{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Implicit","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"4b7c0dfd_972b_4d6d_aaea_ff1c8a0a2cec"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Car","methodName":"equals","desc":"(Ljava/lang/Object;)Z","index":0},"field":"4661fa75_bfa8_4473_9dc0_3f2f36288c65"},{"controlStmt":{"className":"lang/Test","methodName":"equals","desc":"(Ljava/lang/Object;)Z","index":0},"field":"042b269a_3a1e_4ccd_abcb_f63b4c532c55"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CannotRemoveNestedRegions","methodName":"foo","desc":"(Z)V","index":0},"field":"850fe3dc_0f1f_44a5_9b8c_11249e8b8e57"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MultipleConstructors","methodName":"<init>","desc":"(Z)V","index":0},"field":"60f9d1bb_525f_43fa_a027_443613857780"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CanExpandConstraintsDown","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"4853b075_eacf_4ee4_8714_45de93468900"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"330ecd2c_4641_49b8_b9ad_b71182f2eca3"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"ff5bb265_6a96_4349_ad9d_e2aafecf5fcb"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example8","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"6bb1f0b4_3f55_47b0_8510_9b2527596ee6"},{"controlStmt":{"className":"lang/Test","methodName":"test","desc":"()V","index":1},"field":"d5cf99f6_892a_4aae_8a2e_9f438a1cbf26"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testFields2","desc":"()V","index":0},"field":"067a7f78_9453_4925_902c_df7ac8060935"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example8","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"6fafe153_71bd_4f1e_a3ae_9d3355047ebd"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testImplicitFlows","desc":"()V","index":2},"field":"6d25daec_92bc_4da7_93a9_3fa83bc88097"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/BerkeleyDBIPDIndexBug","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"f5d80369_1858_4dd3_9f0c_726f55ed8b4d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CleanConstraintsIssue","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"24941152_cecb_4b9d_ac7b_141cfc1ac0a9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces7","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"3f414dad_fc46_4944_923c_04eb3a77a108"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Return2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"69977532_3ba3_4023_b77f_9ae74274783f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"80be536d_b64c_4fde_ac28_b7f2e91a8814"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"47579320_4c54_4093_97ee_58ad56e073a5"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"69219b97_b495_4bc5_afb4_5493ccb4418b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"moo","desc":"(Z)V","index":0},"field":"24a6f054_bda7_4fae_b010_d2552915afcc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext5","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"86e4ede0_edf6_4ff7_be78_597b04566de6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":7},"field":"b798573f_b997_4a87_804b_5a2619c22796"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/EarlyJoinExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"a96323a1_169b_4046_b24c_340d72d899db"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/EarlyJoinExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"81474ee3_d42c_407c_9604_80a9658162cf"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Trivial","methodName":"foo","desc":"(Z)V","index":0},"field":"5bee760a_8250_4c0e_9bd4_86effcca357f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example5","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"9976a567_7495_4ec2_b9b2_99db3341fc66"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"ed3d8957_7a2e_4998_ba18_51a6b7677e1f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ReturnExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"33e53456_47cc_40a5_bc4d_e03cb0472ac6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces2","methodName":"foo","desc":"(Z)V","index":0},"field":"2250d39f_187d_4e92_ade7_c94a83eaf9a4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample5","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"bef3fdf7_3815_4894_b2e4_223de715321d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"d80e3f7b_c280_4bc4_b8d8_f74d98094713"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample4","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"3756a485_469f_4186_a5f8_ffdcb2665591"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testBranchNotTaken","desc":"()V","index":1},"field":"6f9ada11_8503_41ca_82c9_597cbbba8477"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces5","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"19b85dd4_4294_4f58_8db9_5229263dd12d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"659bf333_1e0a_421d_8667_3c653f4f07cc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MethodCall","methodName":"foo","desc":"(ZZ)V","index":0},"field":"965e118f_c917_403b_8338_5c9831ffb321"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CannotRemoveNestedRegions","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"5e874255_c7dd_4f62_acc1_c60567f00e24"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"6ac61659_7438_4119_a75e_9784390bd4ef"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Car","methodName":"equals","desc":"(Ljava/lang/Object;)Z","index":2},"field":"10ffd627_6461_4052_bbb3_cf57f9294059"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"cow","desc":"(Z)V","index":0},"field":"1b9a76be_c401_4fe6_ab9c_21a1123611d5"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/BerkeleyDbStaticNewLabelBug","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"cba80d3e_7042_4100_94ae_529179bc6086"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"exceptions","desc":"(ZZ)V","index":4},"field":"0a4477a1_644d_48ed_bb35_3252292433b3"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"16d43c3e_8214_4716_9817_827cf140b36e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext6","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"65333396_1bc0_47b9_9d0d_47e4e61a475f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":11},"field":"16c71d60_9b79_4799_a0d5_a05ee3b9d489"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CallStaticField","methodName":"foo","desc":"(Z)V","index":0},"field":"36a8edec_b463_4c1e_9ec7_473833a0f26e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example6","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"1704a70e_b225_43e5_8aa3_b3f15908df45"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces6","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"ca323a12_200b_4a9b_b266_2b95b4458d3b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example8","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"dd73363a_5bb4_4d9a_a26a_ac47f4a1c399"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext4","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"cfceb954_d8a7_4c8d_80d9_a89d73ee964d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example9","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"7724fd13_68dc_4de5_9d93_1621d3d55676"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"ce2fa0bc_8e7e_4b7a_a70b_ffb3523ba5e0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":10},"field":"30a8a355_f9b4_48bb_9c7a_3bec5da6b354"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces6","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"20173d50_6240_4a7f_9428_1e907ab24ad1"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IfOr2","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"58940da1_7d39_407f_8afa_04a86db67e14"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample5","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"f06813e2_adc2_42b1_8d0e_9059e63c002f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample5","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"b05a2274_b40a_4fd3_b2d8_27ff1214dcf9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testFields1","desc":"()V","index":1},"field":"98da5fdc_7a04_4310_9766_b713d340c2c8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"exceptions","desc":"(ZZ)V","index":1},"field":"01ed2852_0a85_48eb_9584_bef65631318f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"ac0dee33_85a4_4efd_8aff_9de96d85b9ea"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testFields1","desc":"()V","index":3},"field":"38266e1a_ed92_4e92_a942_f911e71b3a64"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MultiFacets","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"0a6082e7_ef37_4186_92a4_032d11945b6d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/MultiFacets","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"ce3b602b_7341_48b0_9c93_311e6c0430d7"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Performance","methodName":"run","desc":"([Ljava/lang/String;)V","index":2},"field":"5e125e89_39ae_4f07_8286_6cdf0ad3cc4c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"2c9fc9fa_e961_4ec2_b8b5_7506f9019be7"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/TimerHelper","methodName":"printExecutionTime","desc":"()V","index":0},"field":"1ee133f1_3fac_45ee_92f8_4b5103120039"},{"controlStmt":{"className":"lang/Test","methodName":"equals","desc":"(Ljava/lang/Object;)Z","index":3},"field":"b4fb996d_e0cd_4cb1_adfa_aaae33159b77"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":11},"field":"a8ec9ec4_8da1_4519_98b6_7b541b69f54d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"55e65f3d_ded2_40e4_b3f9_fbe107b71af6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext3","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"d97eb8ce_8c75_4005_9ef2_d68ca16f5567"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IfAnd","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"0bb061d8_9de9_45a2_a609_978783844b2d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"c2e9ac40_c24e_4169_9e68_823ed64b3317"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"59dc4745_1fd6_407b_8e2a_0251aca0aab5"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext4","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"d6556db9_8cf6_4fc4_9e1c_8f8e3d92dbe0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":10},"field":"dcd4a281_b2d4_48e6_a5a8_2fa5b755abc1"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Nesting","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"31237fdb_2a4f_4442_b1b5_dd396a20d51c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example5","methodName":"sendHeaders","desc":"(IZ)V","index":0},"field":"24161a22_ac5d_478f_9880_5658610953cb"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"557fdb6b_71c7_46a8_8bfd_4e89bdc032a2"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/BerkeleyDBIPDIndexBug","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"4f0764a7_be6f_4922_acf0_dbed94d7fc5d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/AssertTest2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"76aa0223_fd1c_49bd_99d6_726837f1ebcb"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example2","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"22eeb41a_c7c3_4fd5_bac9_4695c8f4bd19"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces5","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"973238ce_5175_44c5_8d9f_e041e337a3e9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample3","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"4e30e1e6_faea_46d2_a4e9_f0360b780558"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces7","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"a4b29fc9_9e32_4922_97fb_e6301efa2e50"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"76d2cdf2_d4e8_4c1f_aa49_1637239979e5"},{"controlStmt":{"className":"lang/Test","methodName":"equals","desc":"(Ljava/lang/Object;)Z","index":1},"field":"5f72aa86_6e04_46a4_b0b7_658c81a653b7"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testFields1","desc":"()V","index":0},"field":"f860b66b_e0de_4ce3_9c69_65838dc4add5"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext1","methodName":"foo","desc":"(Z)V","index":0},"field":"d05de409_b20f_4a68_8945_347fa7032d1c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/RunningExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"881c74b4_f82e_43d0_9615_98a2b809cfa4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/RunningExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"9c8e1749_200d_4bda_8b08_cd1558bb27ed"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MultiFacets","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"7b817954_5ed4_4720_ba73_8bc2ec7f80c0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/MultiFacets","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"95d6e1f3_4aec_4ec1_b113_0a689338d00b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"end","desc":"(Ljava/lang/String;)V","index":1},"field":"f7f672a1_a218_419b_837b_4cae7abe2677"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/StaticMethodCall","methodName":"foo","desc":"(Z)V","index":0},"field":"d0969e55_7210_4356_afc7_59448730435c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CanExpandConstraintsDown","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"d1f18199_9018_4713_b4f0_17d18cb17a2b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"e824292b_9710_4c98_9313_7f02d8c34176"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ImpossibleDynamicPerformanceMeasurement","methodName":"foo","desc":"(I)V","index":0},"field":"fd05d269_4779_4033_b8a3_09e473dd7774"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example9","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"d92a9de8_5e18_4e4b_9f1a_bcd9ecab12b9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":8},"field":"fd3990f6_997b_468d_984e_a4b95805452d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testAllTypesOfComparisons","desc":"()V","index":1},"field":"8e7114e9_c8d3_47db_be9e_f49e74753400"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"5a787d4a_a90d_4fad_a7d2_d8d284c7bb58"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testFields2","desc":"()V","index":1},"field":"7f0fc031_c84f_4ab0_a99b_d5e0c2a44ad0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/EarlyJoinExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"793e1918_82f9_4ecc_8f10_33623265adc9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":8},"field":"e32d4c25_d7fa_4e7f_9ff7_15377341bf12"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces4","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"7e150d85_361c_42af_9be8_f565620fe8d0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"60f10148_c43e_4994_89c7_e601701b20c0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ProjectExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"dd0c9cb3_f761_4eb9_a22a_26adb542e968"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/StringOps","methodName":"stringOps","desc":"()V","index":0},"field":"89a96484_3763_40db_ad1c_99dc88e3bac0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"f7138ed6_3610_4407_b001_f92cb008f384"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/EarlyJoinExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"7a670170_6854_4042_8157_27d641ecba1a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"72eb5717_bd5e_489a_a39a_1a3a08aa7b8d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":8},"field":"5320836a_2eb3_4108_bf01_b1b458e5cc90"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example1","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"20b8b770_f07a_4731_b6bb_bdb6daf71262"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testBranchNotTaken","desc":"()V","index":3},"field":"b519f896_6cb5_4b12_822b_b550eaf4aa7f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CanExpandConstraintsDown","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"08174ddf_f4be_4b2d_9bd9_1a86dc46edc6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext6","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"1058777f_4f44_4976_9d2a_995efb9f5221"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CleanConstraints","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"5b4d92e2_4abd_4056_affc_2581295da4c5"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":10},"field":"dab9dc91_4be3_491f_8bff_bb3b8b85e989"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ImpossibleDynamicPerformanceMeasurement","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"a36ce927_5899_4cfa_942c_2a2b3411c533"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":7},"field":"0bb954fb_a5fa_4837_af69_5dca123b4d11"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample6","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"fbae1f0f_3a4c_495a_a850_67fcf787ba13"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext5","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"69500c14_3cb0_4c70_9980_7eadd4ee315a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":9},"field":"36508c62_852a_4386_9d11_55f41877d99a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example7","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"035b75f9_0709_4435_86ef_93df101526ce"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Nested","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"65cd3bd0_8a99_4217_ac28_a285838701a9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":8},"field":"10b62d6b_9aaa_4185_b1ad_2ebc159166ef"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample3","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"12120fe5_8c5c_4844_8345_290310a3110c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/BerkeleyDBIPDIndexBug","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"ae1d9b67_3b56_40f3_87c2_a3020411d686"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testFields2","desc":"()V","index":2},"field":"a96361ed_57ab_4cc9_a485_de13bdcd5dc9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ThrowIf","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"29a9a72c_2c59_45fa_a33b_f72dbc71a319"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CleanConstraints","methodName":"foo","desc":"(ZZ)V","index":0},"field":"5af80085_a5e6_42b2_aa89_d072f711abe4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"92fcaf3a_a068_4acd_b907_03ce52dc6483"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ContextDataTaintsEqual","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"3232e3ed_66b0_432c_b667_dda32e00e773"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example9","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"4e27d728_ca78_403e_a660_5a5662e44a80"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ProjectExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"617e8770_aae2_4dda_8d26_11f8992af61a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/TestPrintExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"980bf1cd_19df_4f18_9048_1f08ccfd29db"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/StaticMethodCall","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"0b25a375_81c2_4e1d_be99_df4894e0e10c"},{"controlStmt":{"className":"lang/Test","methodName":"practice","desc":"(II)V","index":0},"field":"036fdaac_36e0_40b5_8afc_56aae836c11a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"8106518e_29a5_4689_bca0_4bfdfe81d2c0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ThrowEnd","methodName":"some","desc":"([Ljava/lang/String;)V","index":0},"field":"20fa79c6_4f9b_445e_adf3_e578224c696e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ContextDataTaintsEqual","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"5b0a2ec2_dcfd_4a4e_a76f_f9e448d48fdb"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"643016a0_298e_40f5_a8ca_c12475b503af"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"14bb893c_9cee_496c_ae99_bbe2d32751ad"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OverrideJREMethod","methodName":"toString","desc":"()Ljava/lang/String;","index":0},"field":"b91fb26b_8e6a_4aea_a9b7_d546cfff4932"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext3","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"ac98814a_a71e_4896_82c2_b642723ac3af"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext6","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"27c46270_0e59_49d3_bf37_dcd3e8e02c08"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":9},"field":"2454c2fc_b882_4f5c_91c8_4cd59a0765b7"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/WhileTrue","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"37cb7f59_9238_4ad1_9e01_a1096b3232bd"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext3","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"0860b63d_b015_464e_b808_a6f08af2a4bc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"294aeec8_f708_49c5_a4ca_485b2f8f9b09"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/AndContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"9abfa801_0e52_4dc6_add4_4e12c7b81a99"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext3","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"30c130e1_268c_416f_b3b1_79c0c0e8f15c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext2","methodName":"foo","desc":"(Z)V","index":0},"field":"593ea3f4_0539_480a_8244_9f85a838830c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CleanConstraints","methodName":"foo","desc":"(ZZ)V","index":1},"field":"50753407_6fae_4d3d_bc7a_a0a66dd0c2e3"},{"controlStmt":{"className":"lang/Test","methodName":"equals","desc":"(Ljava/lang/Object;)Z","index":2},"field":"a87d04da_90ab_4001_96f2_5354bd980223"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"3859a544_64bd_4fb5_8b48_9f325c2434ea"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/EarlyJoinExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"cddebc56_aa4c_49ed_a72b_5e52c26477cc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext3","methodName":"foo","desc":"(I)V","index":0},"field":"fcfb40d4_d95c_4ab4_80a8_191ba35e1b46"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"exceptions","desc":"(ZZ)V","index":3},"field":"8621818e_9821_4683_89f5_db3781653d88"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":9},"field":"5c999cc5_b82b_46fe_b3fe_9b43ac604065"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"bar","desc":"(Z)V","index":0},"field":"378170fd_900a_4bc6_ba78_6b3cb0bed4e5"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"47044051_2b03_4f3c_bc45_f0c4dca3bb5d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/AndContext","methodName":"foo","desc":"(Z)V","index":0},"field":"2b12d4cc_7a3f_4a1b_8353_12a21d759418"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"ccc0cd2f_7f5d_4935_ad52_f2779aff0f86"},{"controlStmt":{"className":"lang/Test","methodName":"equals","desc":"(Ljava/lang/Object;)Z","index":4},"field":"9459711f_1587_49cd_b6a1_b93ad8cfdd2c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Performance","methodName":"foo","desc":"(Z)I","index":0},"field":"311211c4_da32_4394_b7ff_bc3de2723bb4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Trivial","methodName":"bar","desc":"(Z)V","index":0},"field":"0ee81a37_54e1_4083_acef_d1ef24fe6c4d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Implicit2","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"058e8fbf_d461_42f8_bd38_8ff3fe2180ff"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"a30f6dff_86d1_4616_ac88_0c713e692b27"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MethodCall","methodName":"bar","desc":"(Z)V","index":0},"field":"f0fbd7dd_a0a8_4a80_918b_8c708f664abf"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"5a6db9b6_0800_408e_b74d_4a6399091e6b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":8},"field":"6a2fcb63_29b7_48f0_b763_d8b0252d59df"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":11},"field":"30967e52_1f96_4b5c_bb12_dace6b2d57c4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ProjectExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"567504b6_1221_4d78_bbdc_0e12615a927d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"acb7ee76_39e0_4854_8629_78c4bf2be04b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":8},"field":"e32a003b_4137_404b_a184_faf7f6ee1c85"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MultiFacets","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"c5d54727_5e9b_4f3c_8732_094d6c26a43a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Performance","methodName":"run","desc":"([Ljava/lang/String;)V","index":1},"field":"6b3fa960_f61b_4814_a8eb_46828961bf4b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":14},"field":"f533f66d_fb20_482e_88ff_affba0e85790"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testImplicitFlows","desc":"()V","index":1},"field":"814f6e6e_4cb7_4bc0_b04f_72b2935fb1d8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"409326d5_910d_439d_85f1_a7e0062f29af"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MultipleConstructors","methodName":"<init>","desc":"(I)V","index":0},"field":"c30ade9d_4f58_4aa9_8b31_f09619cd49d8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces3","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"e1b95834_a61d_4a6b_9747_c7cd39e6b174"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MultipleReturns","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"2391347f_5e3a_4e3c_9643_f69df6204d40"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testImplicitFlows","desc":"()V","index":0},"field":"58fe7940_979f_4837_b660_260f840be56a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Constructor","methodName":"<init>","desc":"([Ljava/lang/String;)V","index":1},"field":"76519cba_595e_4fe8_9543_2a9d1c74e279"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces3","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"50af8cc3_51f5_442d_8064_4f6b0a948539"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces4","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"38d4fe4c_f144_49e4_b25c_0ee2c1faa54f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example9","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"b6cfe807_5f04_45b5_8ac0_af8c689a4934"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"36175365_9410_4370_a0e1_1d6b6fd1145c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"010f7fda_eb82_4041_a534_6a02ddfdc933"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testBranchNotTaken","desc":"()V","index":2},"field":"181e1e71_40ea_4958_aaa9_d9840b2913c0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"654da35e_218f_4785_a87b_d0f355486b1b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/StringOps","methodName":"carOps","desc":"()V","index":0},"field":"ac891e10_3ecd_4976_a5e8_9e1791f5cbf4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"b43e2ec5_9179_422c_aad0_415ce1928437"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IfOr","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"4e334c33_2d4d_4f91_a5a1_1a2bcd7245e8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IfOr2","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"313d788a_94f3_4708_926c_f862e8290f19"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"29c140c9_270b_4bf5_84ae_f5aab62795f6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample6","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"819bf145_d4da_471a_a924_cfb0be1cfd62"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"32906658_4d78_4220_be51_e261b740b367"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample6","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"1996a38f_7ea6_4fa5_83c5_6e2953ad814f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext5","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"0f993352_c38e_4308_9511_44b819cfef0e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example9","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"f9a0c3c9_f072_4b7d_9341_abd0165cb780"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CanRemoveNestedConstraintsMultipleCallSites","methodName":"foo","desc":"(Z)V","index":0},"field":"f3786934_d339_423b_abcf_2eaac85b7767"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"exceptions","desc":"(ZZ)V","index":0},"field":"6c91551d_f13e_4370_bee8_ce464b9bab1d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testImplicitFlows","desc":"()V","index":5},"field":"7ddd2664_b3ac_47b1_9981_585cb1a83cf2"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces4","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"6b41fd17_88e8_43e0_856b_1e821282fd67"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/WhileTrue2","methodName":"some","desc":"(I)I","index":0},"field":"d0173994_2e2d_4c84_9118_54b14eeeb121"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":7},"field":"3e6f3390_a9fa_4b7a_8271_df05fa890a08"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example1","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"9e97c0e2_ac72_4d7f_80ae_3eeb58eb94bc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces7","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"cb1f0c54_84b6_4c78_9f07_4d5a4118afbf"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"f3e11761_f26e_494d_b145_df449907f1fc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ReturnExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"3c1d8af1_9836_4c88_af04_4f653e92d76e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example1","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"e36df345_6327_4864_b4cd_b64d0e5d7c63"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example9","methodName":"foo","desc":"(I)V","index":0},"field":"b3b8d4fc_6ad4_441e_bca9_e0ccf7c822b7"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ProjectExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"f9cfebc8_edb4_4564_b3b6_db622cb41d6c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testAllTypesOfComparisons","desc":"()V","index":3},"field":"3e1ff837_5ede_4dab_a28e_0aed40a1be10"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example7","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"87d39ae1_6b6a_4ab3_abaa_f84f3e984715"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"exceptions","desc":"(ZZ)V","index":2},"field":"99d30795_3aca_4698_aeb7_17b04a8ef777"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/LightControlTracking","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"0287f9f6_cb27_4195_b90f_1dfa70f3b13d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/AndContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"ef3978c5_a683_4944_8e54_60f8055b01d6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ThrowIf","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"630e6e53_4b98_4fc9_89b3_e9735f95ddb9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example2","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"14661b40_1536_46fb_8c29_1ad04d03662f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testAllTypesOfComparisons","desc":"()V","index":0},"field":"af41db36_419a_423c_8ce7_d02f17a834c7"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":9},"field":"0d9f2e7e_7880_4f36_b55c_9d2b0ef08e85"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"c2bc7ff1_dfca_44f2_aac5_baceaefcf658"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"1d547af1_980e_477b_a70a_31aeb590b83e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CleanConstraintsIssue","methodName":"bar","desc":"(Z)V","index":0},"field":"4bec0645_0827_4769_bbe5_63e1d9a0d44b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"9d5edd53_db23_4ce5_b3bf_28c6d9b447bd"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"cc092a66_9ae4_431c_bc6a_10214d91ee14"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Performance","methodName":"getFactors","desc":"(I)[I","index":3},"field":"88467ecb_45d7_459c_8e58_c847e2991f15"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/RunningExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"16b8c39f_0e1e_438c_af46_cc9bdb9eca18"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample4","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"826df090_39ab_41d8_aff8_d9f2b7a3d74e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example9","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"c785cd2b_162a_4e6e_a3d2_aacd93c75a48"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example2","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"9addfdcd_8aa0_407c_8efc_df1cf47764d8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext4","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"55022e40_de2c_4d23_a814_e365229951d2"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CallStaticField","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"c192736c_ad6f_48c8_a244_6b1143546ea3"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":15},"field":"27249b87_c4f3_4992_8f1c_17eb11188ff6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":10},"field":"770ff12b_05c6_41f9_b326_2227cfa7ee75"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample6","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"53c043c5_fd1b_49e2_9fbb_a7213ef07bfd"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"76215e2c_bf8e_467f_8c3f_178c991851d1"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":7},"field":"11f2d603_421c_4e76_bd27_771f33d1f040"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext3","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"400eb71b_7f27_482f_b3f2_8a5290d12b24"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example4","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"7acfba17_09f4_47f0_9a5b_dad571951cf2"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":9},"field":"13166dee_4cc2_4838_9d67_a2b46b9e5b6e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Implicit","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"af2707ac_5300_468d_98d9_c31479577ec2"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext3","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"18e47036_aacc_4002_8cd2_ce3d099fda8d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Return2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"789f9a0d_24b9_49aa_91bd_b6ee8f1249aa"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IfAnd","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"ed427734_3d51_4455_aced_cf8987921c70"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/BerkeleyDbStaticNewLabelBug","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"559f118d_d67f_40e0_8005_36807e3d90c4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"6174e2c2_c56c_41fe_8c2b_a05f9250e273"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example6","methodName":"unnecessaryMethod","desc":"(I)I","index":0},"field":"7ae43494_d274_4357_a8e7_13769210cbdc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"27b9cd89_18a4_46bd_a95a_bfe2143f3888"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IfOr","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"0ae48e16_d278_47bb_8af6_025974d98992"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces6","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"b7203e75_0514_4719_ba05_6b67ef0acbfa"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"4795da36_98bc_48b9_9dfe_69627b91f498"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example7","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"e4e1bd43_c678_417a_b6ed_e3ea4e2425a3"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":7},"field":"da6afe14_1644_4ee9_8f78_d7af563e27b0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"72ab9a9a_bd2f_46ab_b41f_7e5910f61cfe"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testFields2","desc":"()V","index":3},"field":"05f65a50_ed1c_452c_aab6_e20150199f7d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Performance","methodName":"getFactors","desc":"(I)[I","index":2},"field":"1e9a1729_1f9d_451f_9569_bf6bbc6ef871"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CannotExpandConstraintsDown","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"7da07356_0608_48ff_b12e_c770f8802ef0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Sound","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"fa996b80_6e1c_4feb_888c_0012bf374b66"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Performance","methodName":"run","desc":"([Ljava/lang/String;)V","index":0},"field":"c08f1bff_eb06_4a15_969f_cb7dea1ba005"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/AndContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"4b653527_93a7_45dd_bf5d_c6bfbe74378d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example7","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"0083ee47_05eb_4e7e_8f54_bf0f572a7af3"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/BerkeleyDbStaticNewLabelBug","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"da96356b_4960_4bc4_8da7_00fc6db3f79c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"90150a76_49d5_49b0_9433_314203f9eb6f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":8},"field":"4a00a5aa_e2a4_4627_828f_0b18c21d3686"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"counter","desc":"(J)V","index":1},"field":"012fc701_beff_4bda_b1da_8b94c6ecc7ee"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext2","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"ffdddc81_68f0_4423_abd7_662a6f8a0542"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testImplicitFlows","desc":"()V","index":3},"field":"8a0fdbca_5a3a_49de_a7d0_dd9fbc4cec1d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Implicit2","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"2db83501_9761_41ed_89c2_2e5f91557de4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/ControlStack","methodName":"equalTaintAndStack","desc":"(ZZ)V","index":1},"field":"25c500e7_dceb_41f4_ae0b_bf8f490023e4"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CallStaticField","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"1ffc2b7e_4fb2_47c2_9e83_ef9e3414b25b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"776cc934_9b87_4264_8aa7_be56c38b85a5"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":13},"field":"6e8265e2_e7cb_402c_99e8_72bbbc009193"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext5","methodName":"foo","desc":"(Z)V","index":0},"field":"f05150f6_4b00_411c_ae2e_fa2067d0cc1d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Performance","methodName":"getFactors","desc":"(I)[I","index":0},"field":"19209d92_bd96_4ea5_8e4b_fb283d56a192"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"dba954d0_8835_410c_a2e4_8178631aaecc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"counter","desc":"(J)V","index":0},"field":"2b100c39_e67f_4447_87f3_909d0835953d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example7","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"ce84855a_cbd0_4fde_80b2_08c0d556d07c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"method","desc":"(II)Z","index":0},"field":"448f96f1_c85c_4921_88cf_c55595d5c9c3"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/LightControlTracking","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"5b38f13b_f683_497f_ab10_9c3a7462ab12"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MultipleConstructors","methodName":"<init>","desc":"(Ljava/lang/String;)V","index":0},"field":"f156750f_43c2_4094_8e30_788c1a62ec85"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"e6ad5461_1a3f_42b0_b99f_893510a05e0e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces5","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"118ceb8f_ebd5_4ccd_8351_3a6603486b00"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IfOr2","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"2bccf190_7a0c_4d0b_a19c_c82bec651d0b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"6835a771_321b_4aec_a077_dc4e67f8edfd"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"start","desc":"(Ljava/lang/String;)V","index":0},"field":"2e262ffb_167a_44ab_a49c_254a7c48a9c0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext3","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"03cf53a8_0e52_4067_914f_90e8c77b588d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example5","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"857ed012_e510_418a_972e_66ac4df98160"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Performance","methodName":"getFactors","desc":"(I)[I","index":1},"field":"d6ff9330_55c3_49ff_b58a_91b3f514379e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext1","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"f87d6ed4_856b_4dd8_81c3_2868c6fa45cf"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/MultipleReturns","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"c1b5cab9_19ab_4244_91bd_dab064765d38"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/EarlyJoinExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"dacd58c2_fc3a_4fec_8358_9c6548f921a8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":12},"field":"34db71b1_6f1b_41ba_872b_5e1a6f07da88"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample2","methodName":"moo","desc":"(Z)V","index":0},"field":"b9873386_a2e5_4806_8c3a_a5d463a4aa38"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/StringOps","methodName":"carOps","desc":"()V","index":1},"field":"4b410dd4_10af_4711_98df_8f3091680714"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Nesting","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"3a3ee865_8975_40a9_8dab_34e326ee912d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/ControlStack","methodName":"equalTaintAndStack","desc":"(ZZ)V","index":0},"field":"92624cc9_5539_4763_a7b2_61e45f593902"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext2","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"6e494949_f0ad_490b_856d_c8ac1eb6de08"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"1cb509cb_ae73_4df5_b9e7_e66d343c7a0f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example6","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"9e615a39_73ac_44d0_8812_d4d8a96c38e6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"foo","desc":"()V","index":0},"field":"5cee2fa7_3131_457e_af6c_ff1b60584cfb"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces","methodName":"foo","desc":"(Z)V","index":0},"field":"c19ae312_fcc7_42f9_b300_3fb12f00f0d9"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/GuessANumber","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"7f2041fc_da6a_49a7_b718_285c9d1139f5"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"be8a7696_e5f4_4b73_82f9_77c767cf13cc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces6","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"7cdb6510_0bf7_454d_9ca9_3828861cb41e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample4","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"eebfedba_5e8a_4070_8093_46cb27648c4e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example7","methodName":"main","desc":"([Ljava/lang/String;)V","index":7},"field":"1ff6aaa3_2486_4733_9e1b_1c4f3134d483"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example8","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"e58ebee0_de20_4aa0_bd0b_9b8a9c620d21"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/BerkeleyDbStaticNewLabelBug","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"42295925_6e2d_499d_9a08_ec727d6b9705"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext","methodName":"foo","desc":"(Z)V","index":0},"field":"7e27e673_4660_4d28_b48d_e40002fad3a8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CleanConstraintsIssue","methodName":"foo","desc":"(Z)V","index":0},"field":"c85779b0_0dc0_4399_8d96_a1d5f6968ccb"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testAllTypesOfComparisons","desc":"()V","index":2},"field":"3c2a46ab_db9e_4c7b_87ef_24e30a9c17c6"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"f979ae11_f61e_49c7_89e9_086c27dd6eed"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Constructor","methodName":"<init>","desc":"([Ljava/lang/String;)V","index":0},"field":"f5e19fa0_a5ce_4358_9384_5687ce0d739a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"counter","desc":"(J)V","index":3},"field":"5c0a102a_d01f_4832_88fc_8ce74b46b0b8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/For2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"fe172438_4a15_4f92_a6cb_f3c809ae79cc"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Implicit","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"2196a6c9_3d6e_4ad6_9991_1c7e62f51428"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example5","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"9ecf3018_00b6_4965_8073_7c5b5ff7a9ae"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Implicit2","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"8ec13af2_9cde_4df2_8779_bf1186a34e9d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleExample1","methodName":"main","desc":"([Ljava/lang/String;)V","index":7},"field":"67807964_82fe_450a_b69a_18979fd9cd79"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example7","methodName":"main","desc":"([Ljava/lang/String;)V","index":4},"field":"6758cf16_d8d9_4a34_9679_ab4945d2de24"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"c39a8475_932e_46d3_9732_51726f3669ec"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"counter","desc":"(J)V","index":2},"field":"2c023675_4d3f_4f72_aba8_a07b9aa4e180"},{"controlStmt":{"className":"lang/Test","methodName":"test","desc":"()V","index":0},"field":"7a2bea7e_a89a_40d0_b2f3_cf6e4349c50b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ExpensiveLoopExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"7bd079df_f7ee_4e62_8196_bb71e9c2b3ad"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ImpossibleDynamicPerformanceMeasurement","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"9725ecbe_abac_49c3_af6e_bc64bdabf5eb"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ExpensiveLoopExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"f3f8ca8a_ad73_4075_b08d_cb006227cd75"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testFields1","desc":"()V","index":2},"field":"2b0188b0_3a1a_42ce_b91a_da528e3de93e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"7d2fab9d_6e94_4528_bb15_1b8283764211"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example3","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"7808d51f_a6cf_4294_aed7_75c1f240cd59"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Car","methodName":"equals","desc":"(Ljava/lang/Object;)Z","index":1},"field":"5d66f900_cc8e_4b69_b518_30edba6c4521"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Nested","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"0a08699d_b308_438c_ad67_39cda3217ac0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"c0369fae_0035_4a90_b7ba_c7bc21ed565b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces4","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"984cc4f2_a92f_4285_bb1d_7d6ccfb28453"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example3","methodName":"foo","desc":"(Z)V","index":0},"field":"3c411d7e_59e2_48f4_a8e6_89e8e1615d1b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces3","methodName":"foo","desc":"(I)V","index":0},"field":"16e67470_71fe_47e7_8d03_4d55b37a5e1e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Sound","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"34ae3b7e_03c1_4b34_b13a_9aecdca9f037"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext5","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"5fd2b0cd_5406_42af_9739_dd6ea9048cfa"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/SimpleForExample6","methodName":"foo","desc":"(Z)V","index":0},"field":"55f78fe8_d05f_4dd3_a7d0_16f8e2b2fe5a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Car","methodName":"hashCode","desc":"()I","index":0},"field":"05857a16_47f8_4237_ae73_268328f4f624"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext4","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"9eb13c88_0b45_4aa6_9c35_ff8aae20c5ed"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ProjectExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"b0f1c32b_e172_4660_bb75_a20a744af926"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/IGenExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":3},"field":"912dd50c_9450_4674_9c3d_07707d8c691c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testBranchNotTaken","desc":"()V","index":0},"field":"f1101ce5_bb70_4f39_bc9b_234682fb69ac"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Sound","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"cad6dad1_c8b2_416f_a9aa_1bdf72301969"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"63a6df46_0507_4279_99d1_d39c12ee479f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CanRemoveNestedConstraintsMultipleCallSites","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"3f8b821a_c906_4ed0_bd29_9494b1d4c787"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"3bf2cd66_c677_4caa_bc00_2210ee5d978b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/RunningExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"836a0dbe_9fd4_4141_a8c9_470e9f9f1453"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/TestPrintExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"fe1cec8a_9539_4a34_8fe5_d622e45ae567"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/EarlyJoinExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":6},"field":"ada1f4e1_ae70_4a50_b59c_3c69eaeffadf"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/AssertTest2Example","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"7f8adf56_56cb_4d29_b4e8_402894acb45b"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":11},"field":"429ddcee_0cf5_4b83_b188_46e494a5a084"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/AndContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"6c9ed5ec_6e95_46d7_bfd0_a9a1e23633e0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example5","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"e1909608_1ed7_4719_8cad_4b206717e6af"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/VariabilityContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"b77883a6_c6f9_4082_a71b_94bac3588e8a"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"end","desc":"(Ljava/lang/String;)V","index":0},"field":"daf84c60_715d_4cb0_bf65_04d100c6b36d"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ProjectExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":5},"field":"8ca1250b_2b66_41dd_b105_7c7382af679c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CanRemoveNestedConstraintsMultipleCallSites","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"8a2d56d3_f423_4d78_b060_bd034119eabb"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CannotExpandConstraintsDown","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"e90c4640_6a9a_44bd_8b05_7d3a55867c90"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/OrContext","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"43735acd_2d2a_4f88_82b3_e5a613479ff8"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Exceptions","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"a7499dae_3489_4977_abe3_04d3a4b2d14c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example4","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"ee28080d_f84a_401f_9598_7afa0ebf43d0"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/ForExample","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"fa3f1b7e_8889_407e_8206_f6e9c873292c"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Align","methodName":"main","desc":"([Ljava/lang/String;)V","index":1},"field":"6d2e68fa_80c5_4154_8eaf_4b93d209c45e"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/CannotExpandConstraintsDown","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"0e1193ac_e102_4900_8b1f_06063d0fcc7f"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/implicit/Test","methodName":"testImplicitFlows","desc":"()V","index":4},"field":"221d5184_50a9_43cb_ad93_081669995387"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Subtraces2","methodName":"main","desc":"([Ljava/lang/String;)V","index":0},"field":"eb69134d_5254_4162_a4fe_3b8dd896b075"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/Example7","methodName":"main","desc":"([Ljava/lang/String;)V","index":2},"field":"4008924a_4514_4642_b869_5f38c43ad370"},{"controlStmt":{"className":"edu/cmu/cs/mvelezce/analysis/PhosphorInstrument","methodName":"main","desc":"([Ljava/lang/String;)V","index":7},"field":"e3365460_b550_42b0_b7cc_2b74c1cae80d"}]
+[
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "9cc18ab0_b990_48e7_94db_47388215eec9"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/WhileTrue2",
+      "methodName": "some",
+      "desc": "(I)I",
+      "index": 0
+    },
+    "field": "7590cebf_96b8_4008_ae77_8f0a1fc091d5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 7
+    },
+    "field": "a0c9970f_0373_4587_ab42_ba7f304b0a8c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testBranchNotTaken",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "b648d087_2e49_492e_ae7a_ef36995cb7e8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Trivial",
+      "methodName": "bar",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "595ad3ad_d51a_4c12_9c2a_7c478fb1ad96"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IfOr2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "75193a27_6c84_4aba_b8e5_e7e0c985186f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ExpensiveLoopExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "faa4fc40_3c17_4ed5_a41e_e395a45f9351"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "dd7442d8_9803_4667_a1f9_a21459f0399d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/WhileTrue",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "e25b78b0_803b_44d2_8d27_927cff354f76"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testFields2",
+      "desc": "()V",
+      "index": 1
+    },
+    "field": "e6cbeb11_d943_444e_86ee_f0b0b2ed1d2f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "39ca27b9_3dac_46ee_bb04_470f9fca7521"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "673c8a68_d3cc_4686_9192_e10d8b8b6a22"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/RunningExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "31ef81bb_43ba_4f80_b33d_38b84b8e6d50"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example9",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "62296e9f_73c9_477f_91c5_96684e3dd64d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IfOr2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "c6241f9e_e5d7_450c_a3f1_5b1043da49be"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example9",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "d6797adb_0661_4130_ac2e_eb4138ea2de4"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "6a47588f_1bf7_4bda_bb0c_8a471dfedb15"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "8c477b14_b5e1_4f0a_b5a6_fabccdaacd0b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "ca59bcd1_7048_4735_a69a_bded0aeaf201"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Sound",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "ffcac790_6bd8_4db0_834d_801f3e1304f1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/StringOps",
+      "methodName": "carOps",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "b70e7225_3533_4027_9821_0696dc8de733"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "53d60d9c_29cb_4135_8864_3eb0cb43495b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "0ea1b46c_c19a_4c9e_a49e_9f27fee3eac8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 7
+    },
+    "field": "a5168485_af16_4c62_a51f_f258c1a19943"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "af3ec8e0_4ed2_49fc_96f8_5e9b5ec16036"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "21d6bcf4_2744_4635_9949_d6e4ad7caeca"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "exceptions",
+      "desc": "(ZZ)V",
+      "index": 4
+    },
+    "field": "9071f1f5_25ec_4d4b_bbb4_be8a86974d26"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "e5823df7_bfcd_4f57_8786_beeacaf0992d"
+  },
+  {
+    "controlStmt": {
+      "className": "lang/Test",
+      "methodName": "equals",
+      "desc": "(Ljava/lang/Object;)Z",
+      "index": 4
+    },
+    "field": "005c1192_7448_4908_b29a_930b3c7eb01c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "ffbc15d6_63a9_4e06_aeb1_94050c2f875e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "b748c1a4_8d53_40ac_98f5_64a4ff83de5a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "16e6f564_1ed1_4e31_83ba_548fdc55d892"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 10
+    },
+    "field": "310fcaaa_4110_4ccc_8215_9e54ccc7cfa1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Implicit",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "2242c3d6_7556_4b95_8236_3ab3c0e4ad74"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ProjectExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "20aa870b_c2dc_42f5_932a_d45d9bba7702"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "3c949257_3a22_4450_8c4e_bf64521ccdbe"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext1",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "76843077_aa12_4e82_a3fb_a762b220e444"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CannotRemoveNestedRegions",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "c6f1a0e4_0205_4653_91fe_a676f925bd43"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "6458c09a_793b_4b58_a96e_43775ffca15b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "fdc0d598_be30_4e7a_becd_6a6cadf5f787"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "moo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "fa11db8c_11aa_446b_ac4a_a2a75e406bd1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 7
+    },
+    "field": "f39772e6_e429_4564_aa70_0acbd65b459b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "2719e0f9_1339_4663_ba8c_0936e923bab7"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "a52dbb5a_9fc6_4744_8472_e5b46f66cd97"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 8
+    },
+    "field": "adc56175_195a_4b1b_9e46_e9821a7a6b6d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 8
+    },
+    "field": "1f85e2d8_6f7c_4132_9e24_feccac1470be"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CanRemoveNestedConstraintsMultipleCallSites",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "2aa03d63_b0d6_45fe_b3cd_c97d03649b53"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "2c286a1c_6536_430f_bbdd_f03852366a59"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 12
+    },
+    "field": "d39a94d9_016e_4828_ba1a_4f9ef3b37394"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 10
+    },
+    "field": "3f3ed4be_1a7c_4ef9_b592_fffcb03cdc17"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "bd67201b_9feb_49e0_a2a6_f6cbf3696403"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "3dd2f791_6f0a_4f34_8edd_33501c2d05af"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CannotExpandConstraintsDown",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "d2ba9c16_0589_4223_bdd8_60ca5a616c65"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IfOr2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "6cb995b5_7206_47d2_89e0_3ab0d3186673"
+  },
+  {
+    "controlStmt": {
+      "className": "lang/Test",
+      "methodName": "equals",
+      "desc": "(Ljava/lang/Object;)Z",
+      "index": 3
+    },
+    "field": "dd7d3ce7_d38f_4409_bfa7_f295311b01fc"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 9
+    },
+    "field": "b4a71bf0_b071_4744_8f06_897e24efd4d0"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "d47b3333_6ddd_4315_b8eb_38b93970fae5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MultipleConstructors",
+      "methodName": "<init>",
+      "desc": "(I)V",
+      "index": 0
+    },
+    "field": "2ea79a81_bccd_499c_a69e_4f8347114f08"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CanExpandConstraintsDown",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "98023e56_ea03_4ea5_9c6b_64a220e4e484"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ProjectExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "96684520_d74e_45d2_8f5c_06ce7e92ed4c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext3",
+      "methodName": "foo",
+      "desc": "(I)V",
+      "index": 0
+    },
+    "field": "55320e02_0be7_49d3_bd1f_4b188395996a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testImplicitFlows",
+      "desc": "()V",
+      "index": 4
+    },
+    "field": "80a3ba55_b94b_4ed6_b8ad_0dfb0dbfdfa4"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Performance",
+      "methodName": "run",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "f3695eff_f585_4829_9d7f_6a2fbaf86e84"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "0e58b162_77e5_4af9_acdb_99fea115ab71"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/AssertTest2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "9793c25a_1d8f_4f0d_bf0c_20db3f93b43d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CanExpandConstraintsDown",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "e745b2dd_75a8_451a_b7ba_0500b7062cb5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "0c7534d0_bdcb_448e_8d8b_f181317ce383"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "c84ab41b_d7a9_4030_8358_f6faae62bba1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "cb31b465_11d6_4ce8_b977_67f1c8b78084"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 8
+    },
+    "field": "499030d4_7e54_4fa3_99b7_ca92086ef15f"
+  },
+  {
+    "controlStmt": {
+      "className": "lang/Test",
+      "methodName": "equals",
+      "desc": "(Ljava/lang/Object;)Z",
+      "index": 0
+    },
+    "field": "17369d33_4abd_4229_a60c_10c5c3c319c2"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "e7c49bb1_21a7_4861_ae6a_0ff770fb7bab"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testAllTypesOfComparisons",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "8e6c96ab_f775_4639_8375_b0761b54de43"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 7
+    },
+    "field": "92402283_5f2a_4942_b456_6010ac0e0eee"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "db9372ec_18f7_44a4_8007_3a586853a17a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "counter",
+      "desc": "(J)V",
+      "index": 3
+    },
+    "field": "38e17e22_52c8_4923_b9b3_bfce31b67d37"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "9e13cca0_d6e9_4236_9d12_1daeb84b6238"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example8",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "3bd6f37e_f37e_4219_87c3_89e6a932fe17"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testAllTypesOfComparisons",
+      "desc": "()V",
+      "index": 3
+    },
+    "field": "adabe5df_4bea_4cea_8dd6_dd3970883362"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "f3e148fd_d81f_450e_8927_2113e377d6a8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testImplicitFlows",
+      "desc": "()V",
+      "index": 3
+    },
+    "field": "71f9b01b_efff_4762_bd61_7ce22ae5658f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "be0c348d_ac10_4ee4_8be7_6d18b4d40125"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Nested",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "e7294b2d_5264_4460_ba58_1b38c5214e89"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CanRemoveNestedConstraintsMultipleCallSites",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "7adb94a6_b04d_4e23_9f5d_3666add26bf0"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/AndContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "3abf042f_01ed_4e6e_b9b9_a30ec35fc526"
+  },
+  {
+    "controlStmt": {
+      "className": "lang/Test",
+      "methodName": "test",
+      "desc": "()V",
+      "index": 1
+    },
+    "field": "105152af_82df_4601_b580_0a4eb7f704bc"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "dc62ceff_c87b_404a_ba9a_865bf6267096"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "fc51faca_d8ac_438d_91e4_4c3eb20c0fc2"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "87696c88_f025_473b_94a2_8c1392f1a2ac"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "08899240_0d75_4e3f_add5_7218b43311b8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CleanConstraints",
+      "methodName": "foo",
+      "desc": "(ZZ)V",
+      "index": 0
+    },
+    "field": "a376a564_40a9_4c5d_9057_26ea436c6b80"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "e1dc3316_9a50_45c3_90a0_381770468671"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Nested",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "458f2951_a30d_4766_9840_122dd6f37b3c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Sound",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "799982fe_190e_4060_8047_7b386c785b29"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "af68e53b_adfc_462e_a042_8d093678decb"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "d8092e94_290f_47d1_911a_014fb8718f05"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces3",
+      "methodName": "foo",
+      "desc": "(I)V",
+      "index": 0
+    },
+    "field": "249bbff3_c686_451f_8689_e06877b86de6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/EarlyJoinExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "caa4ca6d_14f7_4114_b229_9c1936c0d072"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "74b60ff4_23f8_4ce6_923a_ad04be1f344c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "7dd666a3_7708_4d52_ad47_9ac15a2c4818"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CannotExpandConstraintsDown",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "bed5e857_e1df_4574_be7b_316b88c220bf"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testFields1",
+      "desc": "()V",
+      "index": 1
+    },
+    "field": "eb494217_db2c_42c9_9ad6_c76df3cd6a46"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "exceptions",
+      "desc": "(ZZ)V",
+      "index": 0
+    },
+    "field": "a1bafe2f_c258_4880_8703_3aa8c41ea828"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "method",
+      "desc": "(II)Z",
+      "index": 0
+    },
+    "field": "314fabf2_b32c_4dc9_805f_cb6a76267846"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/BerkeleyDbStaticNewLabelBug",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "8b453ba5_bcf7_42f5_88cc_73892572d96b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "cow",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "fc13579a_d8db_4549_9bc5_319f5fea078b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/LightControlTracking",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "7161baf7_b4fb_4639_bea5_6a61caf14137"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "426364f3_728f_4b19_94f8_eb1a5eeb9526"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "39fc4729_1b86_4399_8278_04933f0b6b0f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "41f36a69_a8ac_4a9f_946b_b300f5ef8476"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testFields2",
+      "desc": "()V",
+      "index": 3
+    },
+    "field": "ff4c514d_1605_491e_b033_e2f53f4865e1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "bar",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "060b3e71_99e3_4ee5_8128_5b59b615b048"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Return2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "7aba1917_4bcb_4b0e_9378_fda356504ac8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ThrowIf",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "9a8fe2aa_4bd5_4037_b4f8_c3d9703ba616"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/TimerHelper",
+      "methodName": "printExecutionTime",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "1cc25339_3ea5_4744_9d3f_357e007dbde5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "exceptions",
+      "desc": "(ZZ)V",
+      "index": 1
+    },
+    "field": "b2b11768_652c_4d7e_86ea_5248d23b452b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "a8d29ade_37eb_47af_a0cd_fa4dfdfb5c13"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "counter",
+      "desc": "(J)V",
+      "index": 0
+    },
+    "field": "6c4e42e7_859a_402a_bc25_eb5cc7dab765"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "03bed37f_9f96_4b9b_9e3e_016d156f8922"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "bdc42635_0910_482c_9d78_58658dc7561d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CleanConstraints",
+      "methodName": "foo",
+      "desc": "(ZZ)V",
+      "index": 1
+    },
+    "field": "10fa18f4_4e36_4f33_b20f_582878631b87"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Performance",
+      "methodName": "getFactors",
+      "desc": "(I)[I",
+      "index": 1
+    },
+    "field": "a8287bd7_e4bb_4f91_abe6_fdfdf692e7cc"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "db787c0c_1d87_46de_b73a_7e6090b1fbc6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "9785b82a_ca10_4523_a649_e45264809a9d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example6",
+      "methodName": "unnecessaryMethod",
+      "desc": "(I)I",
+      "index": 0
+    },
+    "field": "0f271a27_3763_4207_8666_86718d5a913d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "a5107cd0_ba85_4d96_ad3e_a378b61c9497"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "45049f83_c393_4378_a1f1_3e1597f17143"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/AndContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "58d5641d_a87f_43a3_8c38_35aa94d8a7a5"
+  },
+  {
+    "controlStmt": {
+      "className": "lang/Test",
+      "methodName": "equals",
+      "desc": "(Ljava/lang/Object;)Z",
+      "index": 2
+    },
+    "field": "62d02153_69fe_455b_a92d_8d6f4f9bfba2"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "cabef083_524f_4118_9c9b_6fe7e18cf15e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 7
+    },
+    "field": "dbeee039_f78a_4569_92c1_cc53cadad4a9"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/EarlyJoinExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "ca127b9f_f2da_4d1a_a0d2_5856e248483e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "a7736975_98fb_4007_9c90_2e8237d14e9b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ImpossibleDynamicPerformanceMeasurement",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "849c23d1_36c3_4633_9bdc_4812fd237763"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "6787bde2_422d_45cb_ac2e_bbee0e96b72f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testImplicitFlows",
+      "desc": "()V",
+      "index": 2
+    },
+    "field": "b0749b0e_3a75_434e_9bae_82af8d6aa21b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ProjectExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "eb4624c7_8585_435b_8115_6a78cd375c06"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/RunningExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "af30b9db_fb4c_4b6a_b70a_61ef88b1516b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "8461cf22_0225_408f_9aa8_6bf7d1b50510"
+  },
+  {
+    "controlStmt": {
+      "className": "lang/Test",
+      "methodName": "equals",
+      "desc": "(Ljava/lang/Object;)Z",
+      "index": 1
+    },
+    "field": "4b448f9a_54f8_47d7_b285_0dca31f647ec"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testBranchNotTaken",
+      "desc": "()V",
+      "index": 1
+    },
+    "field": "6d839dcb_6ebc_4254_8210_d2bed75306fc"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "d830ae5e_1802_410d_b21a_649bfb6fedc8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "ba32cb92_84c6_4db5_aacb_6a1eceec7c82"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CannotExpandConstraintsDown",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "03df73ca_71fe_41fe_8110_f3db973c7065"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "fa720445_6f6d_43d6_9980_bc567d00c336"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OverrideJREMethod",
+      "methodName": "toString",
+      "desc": "()Ljava/lang/String;",
+      "index": 0
+    },
+    "field": "4330e77a_dd5e_400b_beb0_edc59ae18f37"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "e4e937ec_fbfe_4659_adab_c7bd0d105e53"
+  },
+  {
+    "controlStmt": {
+      "className": "lang/Test",
+      "methodName": "practice",
+      "desc": "(II)V",
+      "index": 0
+    },
+    "field": "a82c68d0_bca2_4bfe_90c9_66b67fed6e1c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext5",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "7464cdd0_bad4_452d_93f0_d1abe6f963ed"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "e71deef7_eb9a_4cf9_b10d_64da2ee64dc0"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "2e07711a_9d68_4540_99e9_7460f49d5e5c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "4d2a8dfa_3985_4c03_9387_5a1ee07d3c4b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testImplicitFlows",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "cdcafaf8_3cb1_4a8e_a051_8cad4416df93"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 7
+    },
+    "field": "718fa120_9c92_462f_8d48_75fb5e4894ec"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Performance",
+      "methodName": "getFactors",
+      "desc": "(I)[I",
+      "index": 0
+    },
+    "field": "4bfea526_296d_434b_89cc_4a50b6287f25"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/ControlStack",
+      "methodName": "equalTaintAndStack",
+      "desc": "(ZZ)V",
+      "index": 1
+    },
+    "field": "231ada62_f5ed_421f_b975_94f90e7e4c56"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "fb5a0b26_5fd4_4655_94b4_1a15ea9b5918"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "end",
+      "desc": "(Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "3ada2aa4_4f80_4142_9398_ec9000eb1a8f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "cda7f524_523d_4d4e_88d1_e2829422a1c6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "f70796cc_eb77_4027_ab1e_40d5a6176e5b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "3e43d535_8f78_47bc_bcd3_8b19364dcc3d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 11
+    },
+    "field": "dd26c186_bc2c_46c0_9632_cd44a31c8c1c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CleanConstraintsIssue",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "42e4c58f_3fb8_4870_89b3_c976de378461"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/BerkeleyDBIPDIndexBug",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "479b7f15_ab08_41d3_8462_6c04272034b8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MultipleConstructors",
+      "methodName": "<init>",
+      "desc": "(Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "8a7b03ac_6919_421f_958a_9d4932ba928a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MethodCall",
+      "methodName": "bar",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "fbe00ec9_8ae9_436c_b266_0fff93d036f3"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/LightControlTracking",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "6a04b116_fb61_4d0c_a2c5_bb7697347946"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "5205464d_bb76_49e5_bffa_0bfd48be1de9"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ProjectExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "99747b5f_24e0_4d83_a640_a71b9d1e881f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "37e5036f_6f82_47bd_8710_90d9ff4c5017"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/StaticMethodCall",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "183b8cb6_9a48_4e12_8b60_92e6cef96503"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "d71ffe00_6af6_4968_a3b0_fcc58b413278"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/AssertTest2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "0593cb5a_c56a_4d47_9193_adf5ba72ca86"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "b8f82dbc_22ff_4c14_a6b6_cb40bf0f2886"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "51232234_d1ed_4c21_b9a4_07ecb0f802e7"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/BerkeleyDbStaticNewLabelBug",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "a0511aa7_e6a0_4365_9e3b_c1b46a93a7e4"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "421460c7_98f2_411f_9e0a_52d21063cd7a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces2",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "d9986867_3561_4a2b_8f66_44eca2399159"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CleanConstraintsIssue",
+      "methodName": "bar",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "21450a16_9c15_403d_8fc0_92ed30158d28"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Performance",
+      "methodName": "run",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "a922a893_29de_4240_af82_f2d0420f784c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ProjectExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "5974dea4_e417_47e8_9271_b23f0d3cf251"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 11
+    },
+    "field": "e4c366f1_271e_4ed9_86b7_d6a1b5287fae"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ThrowIf",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "78b2a658_61d9_44dd_bde6_0a1c15330875"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/BerkeleyDbStaticNewLabelBug",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "bf25736a_7adc_4453_b412_cb13db6c03c1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/ControlStack",
+      "methodName": "equalTaintAndStack",
+      "desc": "(ZZ)V",
+      "index": 0
+    },
+    "field": "3cae1f8b_ee92_43ef_af94_4584f3b92878"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/AndContext",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "0758f773_8500_43c4_b80c_35b829d386af"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "88283b87_d51f_4b41_8180_2025e01b0652"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/EarlyJoinExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "8ee0b1d7_74d3_416f_8f12_7f9bbfce7b17"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/BerkeleyDBIPDIndexBug",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "fc204fef_0db3_4e0a_ab28_757e2ac2d6ea"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/StringOps",
+      "methodName": "stringOps",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "57f0891c_7944_4a02_8476_25b6599e800a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "end",
+      "desc": "(Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "606d4e41_0756_4577_b14d_2c4a3a3466db"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "2df73e67_6f7c_4eb6_89a5_9d3a8417606a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "1761825f_c951_42a7_9cdd_bf35a266a812"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CallStaticField",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "51514893_e08c_4132_ac5d_fb3a731d02a7"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 7
+    },
+    "field": "90f96262_4aff_4ea0_aa82_c60b8752bf3d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "22bd5c33_eeb7_42f3_a0f5_12c01cf1d755"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "b406d916_3694_476b_b2b0_ec23a15a0594"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "6d3ffe24_d7e0_4aa5_887f_28916bab8a71"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testFields2",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "33f8f4da_23ba_4fcb_8974_d01894509610"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ThrowEnd",
+      "methodName": "some",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "ed5fe758_edd1_4b8f_8f5e_021d55cf941e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ContextDataTaintsEqual",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "ada06dcc_a8a7_430c_9745_bf030e3733ae"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample6",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "01d34a22_60d8_42f3_ad98_aa164093593e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Trivial",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "84f535d8_e2aa_46d4_93b5_36c027bf5d25"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testFields1",
+      "desc": "()V",
+      "index": 3
+    },
+    "field": "4bff0678_9ec1_464c_b3cf_743f945890bd"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example9",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "7fb84a11_2d5e_4a5f_ada5_4049e2c3d101"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ImpossibleDynamicPerformanceMeasurement",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "15847362_e369_4377_bca1_972cf949dabf"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "3fcdd0e6_7e53_4923_8814_4c9c9b6a3146"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "8f4bc6d3_53f0_46e8_8f70_153032d0cf85"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Implicit2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "029d2c12_c9e1_4df4_ade5_b5c1bd99bd3d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "06b78b2a_2ecd_49eb_bdac_b42de9a944ca"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MultiFacets",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "1549687b_bb8b_4ee3_94ee_5f7cf2644092"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/AndContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "35a39afb_bc12_4968_913a_6705607e94de"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/EarlyJoinExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "9602ad7e_c52a_4138_94e5_43a839006ad2"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 8
+    },
+    "field": "5923c03a_4271_465a_a63e_e19664b882bd"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "moo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "f9f3f744_f690_4748_af1a_d7142eb52e97"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "6b92a51a_79e8_46fc_9f6a_66a3e203f8e5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "d3505151_9caa_4b8c_93cd_2fc1e9ed1704"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 11
+    },
+    "field": "dedab406_7450_427d_b1bd_eec0c8a76cab"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example5",
+      "methodName": "sendHeaders",
+      "desc": "(IZ)V",
+      "index": 0
+    },
+    "field": "45a1d370_b2e7_43b5_ae12_bec0521c3cf4"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example8",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "b0dbf544_f769_4e23_87e4_81217b67f7c8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "2410e31b_30da_45a6_a220_7ad6f78f378b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/MultiFacets",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "1dc665c0_c526_49f9_a373_e2195a862875"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testFields2",
+      "desc": "()V",
+      "index": 2
+    },
+    "field": "a2fd07f4_d5b8_4e24_a930_673c0719a5d3"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "316d377c_01dc_44cb_bca0_e92ebf616753"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "b0f27d23_0662_4126_ba6d_0f9f42a2d828"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "f8e7f96c_6e9a_4042_b906_7feb051fd726"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/RunningExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "71f845a1_0e02_4996_aacf_397a00f9793f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "e4c5420a_8fed_4b14_9ea5_4c1d19864995"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Return2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "083138a2_f4f5_40de_bec4_7909de452eea"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "88ce5f0d_ff3e_475f_b181_7e71a7d111d0"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example9",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "cf678439_a4bc_4145_b5d3_732163aa0818"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example9",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "9eebf096_bf3b_4bb7_a92d_6c7e0ec612bb"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MultipleReturns",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "2051539e_f8f9_44b8_9802_ecf7d62c6861"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "a422049f_326d_4317_9243_0d06c8840980"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "da4e984f_001b_4986_b52f_e93d0b57cf34"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MultiFacets",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "e8a0f716_b5b5_4177_8b99_991b71bdd7e7"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CallStaticField",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "143f0624_ebff_4444_a531_06849b8ee215"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IfOr",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "90e26dbe_80bb_490c_b5bc_b4d5ae56e3e3"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "f83f15bb_eceb_4072_9fe1_3b3879302c61"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "01e2a263_fd3e_4f86_bf8a_2a15511cf45f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testFields1",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "8941910a_63a4_44a2_9f87_dbe2a2ff4a70"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "3f11d42b_00cc_4de9_aeca_da00f6e50e54"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "72853856_652a_41a0_86fd_d935f5c7e695"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "43ab795a_e385_41a4_8a68_b60a778c9c76"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Constructor",
+      "methodName": "<init>",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "e86904e6_611a_4fcd_8891_9066a4c975eb"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/EarlyJoinExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "97a8e532_4fbb_4304_b5ea_930725fcccf8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testImplicitFlows",
+      "desc": "()V",
+      "index": 1
+    },
+    "field": "bc97c2af_02fd_41b2_9067_54d66a9cbc94"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Performance",
+      "methodName": "foo",
+      "desc": "(Z)I",
+      "index": 0
+    },
+    "field": "81e77eda_4c3e_4e16_97d9_e80a399dc300"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "d96c2024_f174_4032_9fd7_77195b9b2de5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MethodCall",
+      "methodName": "foo",
+      "desc": "(ZZ)V",
+      "index": 0
+    },
+    "field": "f80f33d6_ae2b_4c9b_aac1_d68ed2ecbfe2"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "ea2c902d_9c7d_43f1_bbdf_15f9ee929257"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/EarlyJoinExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "d341cb64_d75b_490c_b662_79c0ddf3e115"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 8
+    },
+    "field": "54d0bc97_c46c_4176_9052_e74bf39a3685"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 8
+    },
+    "field": "8af2952e_de9e_4448_ac36_d1c843f23ab2"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "9b46cf7f_46de_4be6_907e_24e0591940c6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CannotRemoveNestedRegions",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "76fb32b6_ea1b_4f7d_bea3_fd1f4827f633"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "exceptions",
+      "desc": "(ZZ)V",
+      "index": 2
+    },
+    "field": "f4f22e4f_45ac_43c4_9ef9_65ec14555aea"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "f8fad478_ec39_4496_8f00_41c26f58c0c7"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CleanConstraints",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "0ab8ef5e_7f77_4472_b7d7_68dd82d785e1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "38434e2a_c785_4419_b2e8_9ab3a34f391d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/BerkeleyDBIPDIndexBug",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "71d75454_b4c6_489a_bfe9_dbdc2e24d51a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "f397af1d_478b_47ac_9eca_6700280a2bad"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "91e8804d_928a_40df_9a15_2c4eb0d393fb"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ExpensiveLoopExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "3efd03ab_155e_4fed_a76a_32468235e49c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "31b3c2cc_abd4_4634_babf_da52267566d1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "f4700750_ea50_476a_9a07_d8179c58e89e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example9",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "c649ba4e_5f93_4d31_8daf_bbb43fc4184b"
+  },
+  {
+    "controlStmt": {
+      "className": "lang/Test",
+      "methodName": "test",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "1c6fce87_540c_417f_86c3_99a235dcf463"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "start",
+      "desc": "(Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "22980562_7e37_4a6a_a253_dfc8f349b310"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/BerkeleyDbStaticNewLabelBug",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "1c58836f_ee4a_4fbe_9d0a_8e013fc5ab6c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "counter",
+      "desc": "(J)V",
+      "index": 2
+    },
+    "field": "a092460d_4f7e_44b3_8fa5_efaa48003ec7"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "4e9f5d5a_2f65_4cd1_87ea_56094d2fe9b2"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testAllTypesOfComparisons",
+      "desc": "()V",
+      "index": 2
+    },
+    "field": "f8f2ed38_3f93_477e_93cc_19be90222b4e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CallStaticField",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "c91f57d2_91ab_4590_b54f_7ebb8d1e7003"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "d67af955_b5ce_4c87_9d9d_9b412e4b89d6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Nesting",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "e1046edf_51e7_4a8f_b908_2b22ae3c2891"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "4d83c879_a0c5_4045_afb1_18d980be8958"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "743af8c0_724d_4dd4_8787_f2bd17be02c8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "96098f10_e140_4b46_a92b_8569178e7a86"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "9d7272c9_2feb_476e_9f63_180b8475dffa"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/RunningExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "2b1d601b_5395_4e22_b8c1_489d5b9c7417"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 11
+    },
+    "field": "2e7b9034_81d6_4a9f_8a98_14e1391ec3ba"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "63b8a6d7_1b28_4652_9d79_95e15ee602e8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/For2Example",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 4
+    },
+    "field": "bbea33a5_3c8f_4e4d_a94d_5da5f287da90"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example8",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "cefc3f92_5a02_4b5b_95c6_13df59d1972e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Performance",
+      "methodName": "getFactors",
+      "desc": "(I)[I",
+      "index": 2
+    },
+    "field": "535734e3_a652_405a_a1ba_c88be908532d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "f22ea980_c491_4463_8644_6938feefc18d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IfAnd",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "65fbe13b_4436_4cd3_8b10_9c9b6d1b608a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "4588fa1b_b7f1_460d_8860_6d1f450eb61d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CleanConstraintsIssue",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "6c72679f_e15d_47fc_8a4a_802f755d9e18"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "5327cb17_020c_4521_9d89_ffff446bc9ed"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "9fe4c4f8_3d18_4ca3_ac10_4055227a7efa"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 10
+    },
+    "field": "f5486c01_1745_4891_92c9_87c8c1dee8d1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MultipleReturns",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "b7912749_04ba_4022_b48e_122cec598c76"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "cab8c4a3_350b_4e9b_93c0_a2cb2c87ae32"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "6d3e7c60_01d7_4b23_b8a2_fe5ea7dc1996"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Car",
+      "methodName": "equals",
+      "desc": "(Ljava/lang/Object;)Z",
+      "index": 0
+    },
+    "field": "a5bd0aea_337b_4176_8496_a85fc5b41695"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "98001fff_f293_4824_84fe_679f8d979312"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/TestPrintExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "30f875bf_3eeb_4ec6_85ce_fe183a838006"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 9
+    },
+    "field": "5965972d_ad9f_417f_a686_373f1b5232d7"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/StaticMethodCall",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "8714537b_fd4b_4170_91c8_2b5592b0190b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Implicit",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "b5561eb8_8cd6_4bf8_86f9_e14ed00927ed"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "6acccb3b_5e8d_454f_8b77_eec8639246af"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Car",
+      "methodName": "hashCode",
+      "desc": "()I",
+      "index": 0
+    },
+    "field": "525d720b_e422_453e_81f2_10e006156616"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "b81e21f0_9cc2_4083_9209_497884a89d75"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "145a51aa_e970_40b0_93e3_7851bd75bf9f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "d01063b3_a918_46ff_aa79_a4cc757f0a78"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "62c9bde8_87ab_42de_a090_b3dc2f341787"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Car",
+      "methodName": "equals",
+      "desc": "(Ljava/lang/Object;)Z",
+      "index": 1
+    },
+    "field": "a07e0454_3924_4b8a_9e33_3f17a58d03ee"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Implicit",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "549e0dda_957d_4efe_8ec0_cccb137810be"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 13
+    },
+    "field": "7e3a8848_8566_4025_a625_856c4617eed3"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/MultiFacets",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "d4b0814a_def6_4aa0_be3f_edf125bf455a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "34697f24_a1b9_4411_bd03_aefa4cdfbd01"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 9
+    },
+    "field": "1ab6d369_b2e2_4490_8256_dcf7fc3424d5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "4a74cae5_a58c_4c01_9aef_e2dbcf5dd2de"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example9",
+      "methodName": "foo",
+      "desc": "(I)V",
+      "index": 0
+    },
+    "field": "e5568a25_f5c8_4c57_aa1b_35bd3a9b57b5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "30eecb9b_c91e_4223_a916_c97217e844f9"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/StringOps",
+      "methodName": "carOps",
+      "desc": "()V",
+      "index": 1
+    },
+    "field": "84e986c5_d903_4fff_8ff0_09871e2ca3b3"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testBranchNotTaken",
+      "desc": "()V",
+      "index": 2
+    },
+    "field": "9a04faad_5817_4333_997f_e38870b006bc"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 14
+    },
+    "field": "8b9a055c_5633_49da_b031_32e62054cf9d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "94e24f9f_fb91_4522_af93_829b4efe223a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Align",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "03167a4d_9687_4f5c_ab47_36484eab9691"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Constructor",
+      "methodName": "<init>",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "30f5b0e7_aa09_47f5_80d6_d5dd2abcf3b6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Car",
+      "methodName": "equals",
+      "desc": "(Ljava/lang/Object;)Z",
+      "index": 2
+    },
+    "field": "e75729ef_b19d_492d_a3e6_706fd352abe0"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CanRemoveNestedConstraintsMultipleCallSites",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "e88872be_517e_4f39_8e45_ab6e4cc93324"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "exceptions",
+      "desc": "(ZZ)V",
+      "index": 3
+    },
+    "field": "22e264d6_feee_48ad_8081_6e8e6f85fa1a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MultipleConstructors",
+      "methodName": "<init>",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "f000f50b_7247_4022_bbb6_69798d8db152"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ReturnExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "7f782609_123b_4d21_aa6a_83a91b096ea6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 8
+    },
+    "field": "b1c6241f_3098_4814_9e1e_6ef70c3c6a08"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ContextDataTaintsEqual",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "08709465_e26c_4568_b2a1_1a0260714438"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext2",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "57c8525e_94e5_4ab5_b2da_ee39dc0107e3"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Implicit2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "eca0cf4c_b4cd_4c31_997c_6dbfe8214bb8"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "29102978_442c_4158_a6fa_3549a9398869"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/VariabilityContext3",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "8fee1db3_104f_49e5_8b66_ae4ab8b0eb6c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "1ca4e16a_c6fb_4766_89b6_880c0035925f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testAllTypesOfComparisons",
+      "desc": "()V",
+      "index": 1
+    },
+    "field": "59a5013e_f630_45e0_9de8_d9297439db56"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Sound",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "8abd0e9d_8a64_4dbd_b99d_c6b9e665d7e6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "foo",
+      "desc": "()V",
+      "index": 0
+    },
+    "field": "67c3037e_b219_441e_8289_cc0d241e9d67"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "4df738ea_9cb8_4b68_be5d_8475b1f175c6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example8",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "121ca01a_a0a9_4001_b49a_94c380dc9c78"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 9
+    },
+    "field": "c2b069df_f8d8_49ba_b55b_f0ec8ee1f0de"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ReturnExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "b0dbf6bc_b791_49e7_8ee3_be3bebbf1a79"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "da3f5f43_45e4_4329_9490_273e570d637d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/TestPrintExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "79d99b75_5dac_4575_9172_7897a4a43c69"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Nesting",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "39140483_2179_43e3_ba0d_ff00b3aa7d4e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 15
+    },
+    "field": "145f4574_17a0_4bcb_9678_6b38d33b234f"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ImpossibleDynamicPerformanceMeasurement",
+      "methodName": "foo",
+      "desc": "(I)V",
+      "index": 0
+    },
+    "field": "41148caa_bb87_49a3_9947_0086ccb36654"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testFields1",
+      "desc": "()V",
+      "index": 2
+    },
+    "field": "2a58c915_2b3c_4f7c_8e33_26d93c321e06"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 6
+    },
+    "field": "cb57d94f_f83a_4503_ba70_980ccdba3351"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 9
+    },
+    "field": "1dd3fc78_6aef_4b53_a5bb_f605615a18df"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IfOr",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "f99ef518_749d_4ed6_85db_66b8597bc5fc"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IfAnd",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "38593bb9_d4e8_44c6_b53a_b192d517d216"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Performance",
+      "methodName": "getFactors",
+      "desc": "(I)[I",
+      "index": 3
+    },
+    "field": "0a0febc0_31f1_4d2f_b82d_cec2ab0a4e64"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces5",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "21ea2516_1c05_4856_a6c1_5167a1f45491"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/OrContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "8475aac8_f4fc_41d9_8cd8_7d44a80519ea"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/CanExpandConstraintsDown",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "e3b2bb97_7b09_4be5_ae53_cf111fb0cf8c"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Performance",
+      "methodName": "run",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "df1b769f_0855_43c7_a373_488e335cf197"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testBranchNotTaken",
+      "desc": "()V",
+      "index": 3
+    },
+    "field": "ef839f94_acab_42e2_a372_6f4a47f11b2a"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/EarlyJoinExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "73d3a7aa_5844_4e79_8f69_f3e96912da52"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Exceptions",
+      "methodName": "counter",
+      "desc": "(J)V",
+      "index": 1
+    },
+    "field": "ba46ed5c_fa8b_4904_b29d_c664589aefbc"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/GuessANumber",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "e9b0cb4a_387d_4573_a783_c106bc7d8950"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example1",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "38abc74e_da3a_42fa_87b4_2beb3dc34d2e"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Implicit2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 2
+    },
+    "field": "8944d0e7_2761_4b9d_8034_69fd20800fa0"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces7",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "fd675083_0d46_42a0_a37a_6f094b38c04d"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleForExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "cf1a87e8_4057_4ad0_b24a_7837aaba74c6"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/IGenExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 7
+    },
+    "field": "f0254c29_4a2b_474b_9e81_c56b9dc0bccb"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/PhosphorInstrument",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 10
+    },
+    "field": "9cb312fa_2e77_4dac_bf32_c0985e5804f9"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/ProjectExample",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 5
+    },
+    "field": "e3ed965d_0d93_4807_9271_a1788b943173"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/AndContext",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "010fb0e9_c976_4c2d_80f3_4343f8a13fa1"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/SimpleExample2",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "723193f0_4944_4075_89e7_0c656da4d7d5"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/implicit/Test",
+      "methodName": "testImplicitFlows",
+      "desc": "()V",
+      "index": 5
+    },
+    "field": "a3ecae02_c8c2_4641_abee_1576eb2457a3"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/MultiFacets",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 1
+    },
+    "field": "9de370e9_7446_4901_94e8_3196c9e5b5e7"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Subtraces4",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 3
+    },
+    "field": "031ac8ec_7a88_4d93_b623_ceac5dd1182b"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example3",
+      "methodName": "foo",
+      "desc": "(Z)V",
+      "index": 0
+    },
+    "field": "e2588620_81cf_4775_a8fb_46e8bf5b7762"
+  },
+  {
+    "controlStmt": {
+      "className": "edu/cmu/cs/mvelezce/analysis/Example6",
+      "methodName": "main",
+      "desc": "([Ljava/lang/String;)V",
+      "index": 0
+    },
+    "field": "74bbc646_ae16_44f8_b234_0a5f2979668d"
+  }
+]
