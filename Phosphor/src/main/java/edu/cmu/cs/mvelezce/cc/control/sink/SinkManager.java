@@ -4,41 +4,96 @@ import edu.cmu.cs.mvelezce.cc.instrumenter.SinkInstrumenter;
 import edu.columbia.cs.psl.phosphor.PreMain;
 import edu.columbia.cs.psl.phosphor.control.standard.StandardControlFlowStack;
 import edu.columbia.cs.psl.phosphor.runtime.Taint;
+import edu.columbia.cs.psl.phosphor.struct.harmony.util.HashMap;
+import edu.columbia.cs.psl.phosphor.struct.harmony.util.Map;
 
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.reflect.Field;
 
 public final class SinkManager {
+
+  private static final Map<Class, Integer> CLASSES_TO_INTS = new HashMap<>();
+  private static final Map<Field, Integer> FIELDS_TO_INTS = new HashMap<>();
+  private static final Map<SinkData, Integer> SINK_DATAS_TO_INTS = new HashMap<>();
+  private static final byte[] NEW_LINE_BYTES = "\n".getBytes();
+
+  private static int classCount = 0;
+  private static int fieldCount = 0;
+  private static int sinkDataCount = 0;
+
+  private static String programName;
 
   private SinkManager() {
     System.out.println();
   }
 
   public static void preProcessSinks(String programName) {
-    System.out.println(programName);
+    SinkManager.programName = programName;
   }
 
-  public static <T> void postProcessSinks() {
-    try {
-      long start = System.nanoTime();
+  public static void postProcessSinks() {
+    long start = System.nanoTime();
+    saveData();
+    System.out.println("Sink processing took " + (System.nanoTime() - start) / 1E9 + " s");
+  }
+
+  private static <T> void saveData() {
+    File outputFile =
+        new File("../../../examples/control/" + SinkManager.programName + "/data.ser");
+    try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
       Class[] classes = PreMain.getInstrumentation().getAllLoadedClasses();
 
       for (Class clazz : classes) {
         // TODO might be able to not look at some classes here
+        boolean hasData = false;
+
         Field[] fields = clazz.getFields();
 
         for (Field field : fields) {
-          if (!field.getName().startsWith(SinkInstrumenter.CC_STATIC_FIELD_PREFIX)) {
+          String fieldName = field.getName();
+
+          if (!fieldName.startsWith(SinkInstrumenter.CC_STATIC_FIELD_PREFIX)) {
             continue;
           }
 
           edu.columbia.cs.psl.phosphor.struct.harmony.util.Set<SinkData<T>> data =
               (edu.columbia.cs.psl.phosphor.struct.harmony.util.Set<SinkData<T>>) field.get(null);
+
+          for (SinkData<T> sinkData : data) {
+            hasData = true;
+            Integer index = SINK_DATAS_TO_INTS.get(sinkData);
+
+            if (index == null) {
+              SINK_DATAS_TO_INTS.put(sinkData, SinkManager.sinkDataCount);
+              index = SinkManager.sinkDataCount;
+            }
+
+            dos.writeInt(SinkManager.classCount);
+            dos.write(NEW_LINE_BYTES);
+            dos.writeInt(SinkManager.fieldCount);
+            dos.write(NEW_LINE_BYTES);
+            dos.writeInt(index);
+            dos.write(NEW_LINE_BYTES);
+
+            SinkManager.sinkDataCount++;
+          }
+
+          if (hasData) {
+            FIELDS_TO_INTS.put(field, SinkManager.fieldCount);
+            SinkManager.fieldCount++;
+          }
+        }
+
+        if (hasData) {
+          CLASSES_TO_INTS.put(clazz, SinkManager.classCount);
+          SinkManager.classCount++;
         }
       }
-
-      System.out.println("Sink processing took " + (System.nanoTime() - start) / 1E9 + " s");
-    } catch (IllegalAccessException iae) {
-      throw new RuntimeException(iae);
+    } catch (IOException | IllegalAccessException e) {
+      throw new RuntimeException(e);
     }
   }
 
