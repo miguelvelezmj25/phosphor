@@ -15,6 +15,14 @@ public class SinkData<T> {
     this.data = data;
   }
 
+  public Taint<T> getControl() {
+    return control;
+  }
+
+  public Taint<T> getData() {
+    return data;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {

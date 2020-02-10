@@ -15,14 +15,16 @@ import java.lang.reflect.Field;
 
 public final class SinkManager {
 
+  public static final byte[] NEW_LINE_BYTES = "\n".getBytes();
+  public static final byte[] LABEL_SEP_BYTES = ":".getBytes();
+  public static final int LABELS_END = Integer.MIN_VALUE;
+
   private static final Map<Class, Integer> CLASSES_TO_INTS = new HashMap<>();
   private static final Map<Field, Integer> FIELDS_TO_INTS = new HashMap<>();
-  private static final Map<SinkData, Integer> SINK_DATAS_TO_INTS = new HashMap<>();
-  private static final byte[] NEW_LINE_BYTES = "\n".getBytes();
-
+  private static final Map<Taint, Integer> TAINTS_TO_INTS = new HashMap<>();
   private static int classCount = 0;
   private static int fieldCount = 0;
-  private static int sinkDataCount = 0;
+  private static int taintCount = 0;
 
   private static String programName;
 
@@ -37,12 +39,13 @@ public final class SinkManager {
   public static void postProcessSinks() {
     long start = System.nanoTime();
     saveData();
-    saveClassesToInts();
-    saveFieldsToInts();
+    saveClasses();
+    saveField();
+    saveTaints();
     System.out.println("Sink processing took " + (System.nanoTime() - start) / 1E9 + " s");
   }
 
-  private static void saveClassesToInts() {
+  private static void saveClasses() {
     File outputFile =
         new File("../../../examples/control/" + SinkManager.programName + "/classes.ser");
     try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
@@ -57,12 +60,36 @@ public final class SinkManager {
     }
   }
 
-  private static void saveFieldsToInts() {
+  private static void saveField() {
     File outputFile =
         new File("../../../examples/control/" + SinkManager.programName + "/fields.ser");
     try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
       for (Map.Entry<Field, Integer> entry : FIELDS_TO_INTS.entrySet()) {
         dos.writeBytes(entry.getKey().getName());
+        dos.write(NEW_LINE_BYTES);
+        dos.writeInt(entry.getValue());
+        dos.write(NEW_LINE_BYTES);
+      }
+    } catch (IOException ioe) {
+      throw new RuntimeException(ioe);
+    }
+  }
+
+  private static void saveTaints() {
+    File outputFile =
+        new File("../../../examples/control/" + SinkManager.programName + "/taints.ser");
+    try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
+      for (Map.Entry<Taint, Integer> entry : TAINTS_TO_INTS.entrySet()) {
+        Taint taint = entry.getKey();
+
+        if (taint != null) {
+          for (Object label : taint.getLabels()) {
+            dos.writeInt((Integer) label);
+            dos.write(LABEL_SEP_BYTES);
+          }
+        }
+
+        dos.writeInt(LABELS_END);
         dos.write(NEW_LINE_BYTES);
         dos.writeInt(entry.getValue());
         dos.write(NEW_LINE_BYTES);
@@ -91,26 +118,39 @@ public final class SinkManager {
             continue;
           }
 
-          edu.columbia.cs.psl.phosphor.struct.harmony.util.Set<SinkData<T>> data =
+          edu.columbia.cs.psl.phosphor.struct.harmony.util.Set<SinkData<T>> sinkData =
               (edu.columbia.cs.psl.phosphor.struct.harmony.util.Set<SinkData<T>>) field.get(null);
 
-          for (SinkData<T> sinkData : data) {
+          for (SinkData<T> entry : sinkData) {
             hasData = true;
-            Integer index = SINK_DATAS_TO_INTS.get(sinkData);
-
-            if (index == null) {
-              SINK_DATAS_TO_INTS.put(sinkData, SinkManager.sinkDataCount);
-              index = SinkManager.sinkDataCount;
-            }
-
             dos.writeInt(SinkManager.classCount);
             dos.write(NEW_LINE_BYTES);
             dos.writeInt(SinkManager.fieldCount);
             dos.write(NEW_LINE_BYTES);
-            dos.writeInt(index);
+
+            Taint<T> control = entry.getControl();
+            Integer taintIndex = TAINTS_TO_INTS.get(control);
+
+            if (taintIndex == null) {
+              TAINTS_TO_INTS.put(control, SinkManager.taintCount);
+              taintIndex = SinkManager.taintCount;
+              SinkManager.taintCount++;
+            }
+
+            dos.writeInt(taintIndex);
             dos.write(NEW_LINE_BYTES);
 
-            SinkManager.sinkDataCount++;
+            Taint<T> data = entry.getData();
+            taintIndex = TAINTS_TO_INTS.get(data);
+
+            if (taintIndex == null) {
+              TAINTS_TO_INTS.put(data, SinkManager.taintCount);
+              taintIndex = SinkManager.taintCount;
+              SinkManager.taintCount++;
+            }
+
+            dos.writeInt(taintIndex);
+            dos.write(NEW_LINE_BYTES);
           }
 
           if (hasData) {
@@ -134,51 +174,4 @@ public final class SinkManager {
     // TODO Should we cache these taints?
     return new SinkData<T>(stack.copyTag(), dataTaints);
   }
-
-  //  synchronized void checkTaint(
-  //          ControlTaintTagStack controlTaintTagStack, Object taintedObject, String id) {
-  //    try {
-  //      this.fos.write(id.getBytes());
-  //      this.fos.write(NEW_LINE_BYTES);
-  //      this.writeTaints(controlTaintTagStack.getTaintHistory().peek());
-  //      this.fos.write(NEW_LINE_BYTES);
-  //      this.writeTaints(taintedObject);
-  //      this.fos.write(NEW_LINE_BYTES);
-  //    } catch (IOException e) {
-  //      // TODO throw error that the taint cannot be written.
-  //    }
-  //  }
-  //
-  //  private void writeTaints(Object taintedObject) throws IOException {
-  //    if (taintedObject == null) {
-  //      this.fos.write(EMPTY);
-  //    } else if (taintedObject instanceof Taint) {
-  //      this.writeTaintLabels((Taint) taintedObject);
-  //    } else if (taintedObject instanceof TaintedWithObjTag) {
-  //      Taint taint = (Taint) ((TaintedWithObjTag) taintedObject).getPHOSPHOR_TAG();
-  //      this.writeTaintLabels(taint);
-  //    } else {
-  //      throw new RuntimeException("What is this thing now? " + taintedObject.getClass());
-  //      //      this.fos.write(EMPTY);
-  //    }
-  //  }
-  //
-  //  private static <T> void processTaintLabels(Taint<T> taint) {
-  //    if (taint == null) {
-  //      //      this.fos.write(EMPTY);
-  //      return;
-  //    }
-  //
-  //    Object[] labels = taint.getLabels();
-  //
-  //    //    for (int i = 0; i < (labels.length - 1); i++) {
-  //    //      this.fos.write(String.valueOf(labels[i]).intern().getBytes());
-  //    //      this.fos.write(COMMA_BYTES);
-  //    //    }
-  //
-  //    //    this.fos.write(String.valueOf(labels[labels.length - 1]).intern().getBytes());
-  //    for (Object label : labels) {
-  //      System.out.println(label);
-  //    }
-  //  }
 }
