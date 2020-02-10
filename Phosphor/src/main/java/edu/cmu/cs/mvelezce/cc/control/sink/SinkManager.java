@@ -15,14 +15,16 @@ import java.lang.reflect.Field;
 
 public final class SinkManager {
 
+  public static final String DATA_FILE = "data.ser";
+  public static final String FIELDS_FILE = "fields.ser";
+  public static final String TAINTS_FILE = "taints.ser";
   public static final byte[] NEW_LINE_BYTES = "\n".getBytes();
   public static final byte[] LABEL_SEP_BYTES = ":".getBytes();
   public static final int LABELS_END = Integer.MIN_VALUE;
 
-  private static final Map<Class, Integer> CLASSES_TO_INTS = new HashMap<>();
   private static final Map<Field, Integer> FIELDS_TO_INTS = new HashMap<>();
   private static final Map<Taint, Integer> TAINTS_TO_INTS = new HashMap<>();
-  private static int classCount = 0;
+
   private static int fieldCount = 0;
   private static int taintCount = 0;
 
@@ -43,10 +45,6 @@ public final class SinkManager {
     long end = System.nanoTime();
     System.out.println("save data " + (end - start) / 1E9 + " s");
     start = System.nanoTime();
-    saveClasses();
-    end = System.nanoTime();
-    System.out.println("save classes " + (end - start) / 1E9 + " s");
-    start = System.nanoTime();
     saveField();
     end = System.nanoTime();
     System.out.println("save fields " + (end - start) / 1E9 + " s");
@@ -58,24 +56,9 @@ public final class SinkManager {
     System.out.println("Sink processing took " + (END - START) / 1E9 + " s");
   }
 
-  private static void saveClasses() {
-    File outputFile =
-        new File("../../../examples/control/" + SinkManager.programName + "/classes.ser");
-    try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
-      for (Map.Entry<Class, Integer> entry : CLASSES_TO_INTS.entrySet()) {
-        dos.writeBytes(entry.getKey().getName());
-        dos.write(NEW_LINE_BYTES);
-        dos.writeInt(entry.getValue());
-        dos.write(NEW_LINE_BYTES);
-      }
-    } catch (IOException ioe) {
-      throw new RuntimeException(ioe);
-    }
-  }
-
   private static void saveField() {
     File outputFile =
-        new File("../../../examples/control/" + SinkManager.programName + "/fields.ser");
+        new File("../../../examples/control/" + SinkManager.programName + "/" + FIELDS_FILE);
     try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
       for (Map.Entry<Field, Integer> entry : FIELDS_TO_INTS.entrySet()) {
         dos.writeBytes(entry.getKey().getName());
@@ -90,7 +73,7 @@ public final class SinkManager {
 
   private static void saveTaints() {
     File outputFile =
-        new File("../../../examples/control/" + SinkManager.programName + "/taints.ser");
+        new File("../../../examples/control/" + SinkManager.programName + "/" + TAINTS_FILE);
     try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
       for (Map.Entry<Taint, Integer> entry : TAINTS_TO_INTS.entrySet()) {
         Taint taint = entry.getKey();
@@ -114,7 +97,7 @@ public final class SinkManager {
 
   private static <T> void saveData() {
     File outputFile =
-        new File("../../../examples/control/" + SinkManager.programName + "/data.ser");
+        new File("../../../examples/control/" + SinkManager.programName + "/" + DATA_FILE);
     try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
       Class[] classes = PreMain.getInstrumentation().getAllLoadedClasses();
 
@@ -136,8 +119,6 @@ public final class SinkManager {
 
           for (SinkData<T> entry : sinkData) {
             hasData = true;
-            dos.writeInt(SinkManager.classCount);
-            dos.write(NEW_LINE_BYTES);
             dos.writeInt(SinkManager.fieldCount);
             dos.write(NEW_LINE_BYTES);
 
@@ -170,11 +151,6 @@ public final class SinkManager {
             FIELDS_TO_INTS.put(field, SinkManager.fieldCount);
             SinkManager.fieldCount++;
           }
-        }
-
-        if (hasData) {
-          CLASSES_TO_INTS.put(clazz, SinkManager.classCount);
-          SinkManager.classCount++;
         }
       }
     } catch (IOException | IllegalAccessException e) {
