@@ -4,17 +4,21 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.cmu.cs.mvelezce.cc.control.sink.ControlStmtField;
 import edu.cmu.cs.mvelezce.cc.control.sink.SinkManager;
 import edu.columbia.cs.psl.phosphor.Configuration;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public final class SinkInstrumenter {
 
   public static final boolean USE_PHOSPHOR_UTILS = true;
-  public static final String CC_STATIC_FIELD_PREFIX = "CC_SINK_";
+  public static final String CC_STATIC_FIELD_PREFIX = "CC_";
   public static final Map<ControlStmt, String> CONTROL_STMTS_TO_FIELDS = new HashMap<>();
   public static final String SET_CLASS_SIGNATURE_FOR_FIELD = getSetClassSignatureForField();
   public static final String SET_CLASS_DESC_FOR_FIELD = getSetClassDescForField();
@@ -70,7 +74,7 @@ public final class SinkInstrumenter {
 
   public static void setCurrentMethod(String className, String methodName, String desc) {
     SinkInstrumenter.currentMethod = new Method(className, methodName, desc);
-    METHODS_TO_CONTROL_COUNTS.putIfAbsent(SinkInstrumenter.currentMethod, 0);
+    METHODS_TO_CONTROL_COUNTS.putIfAbsent(SinkInstrumenter.currentMethod, 1);
     SinkInstrumenter.index = METHODS_TO_CONTROL_COUNTS.get(SinkInstrumenter.currentMethod);
   }
 
@@ -116,7 +120,7 @@ public final class SinkInstrumenter {
             SinkInstrumenter.currentMethod.getMethodName(),
             SinkInstrumenter.currentMethod.getDesc(),
             SinkInstrumenter.index);
-    CONTROL_STMTS_TO_FIELDS.put(controlStmt, UUID.randomUUID().toString().replaceAll("-", "_"));
+    CONTROL_STMTS_TO_FIELDS.put(controlStmt, RandomStringUtils.random(16, true, true));
 
     return getFieldName(CONTROL_STMTS_TO_FIELDS.get(controlStmt));
   }
