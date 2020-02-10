@@ -102,7 +102,6 @@ public final class SinkManager {
       Class[] classes = PreMain.getInstrumentation().getAllLoadedClasses();
 
       for (Class clazz : classes) {
-        // TODO might be able to not look at some classes here
         boolean hasData = false;
 
         Field[] fields = clazz.getFields();
@@ -110,7 +109,7 @@ public final class SinkManager {
         for (Field field : fields) {
           String fieldName = field.getName();
 
-          if (!fieldName.startsWith(SinkInstrumenter.CC_STATIC_FIELD_PREFIX)) {
+          if (!fieldName.startsWith(SinkInstrumenter.STATIC_FIELD_PREFIX_CC)) {
             continue;
           }
 

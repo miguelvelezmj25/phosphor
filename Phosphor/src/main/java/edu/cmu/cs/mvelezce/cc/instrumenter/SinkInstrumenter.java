@@ -18,14 +18,14 @@ import java.util.Set;
 public final class SinkInstrumenter {
 
   public static final boolean USE_PHOSPHOR_UTILS = true;
-  public static final String CC_STATIC_FIELD_PREFIX = "CC_";
+  public static final String STATIC_FIELD_PREFIX_CC = "CC_";
   public static final Map<ControlStmt, String> CONTROL_STMTS_TO_FIELDS = new HashMap<>();
   public static final String SET_CLASS_SIGNATURE_FOR_FIELD = getSetClassSignatureForField();
   public static final String SET_CLASS_DESC_FOR_FIELD = getSetClassDescForField();
   public static final String SET_CLASS_NAME = getSetClassName();
   public static final String HASHSET_CLASS_NAME = getHashSetClassName();
 
-  private static final String CC_SINKS_CLASS = SinkManager.class.getName().replaceAll("\\.", "\\/");
+  private static final String SINKS_CLASS_CC = SinkManager.class.getName().replaceAll("\\.", "\\/");
   private static final String SET_ADD_METHOD_NAME = "add";
   private static final String SET_ADD_METHOD_DESC = "(Ljava/lang/Object;)Z";
   private static final String GET_SINK_DATA_METHOD_NAME = "getSinkData";
@@ -91,7 +91,7 @@ public final class SinkInstrumenter {
     methodVisitor.visitInsn(Opcodes.DUP2);
     methodVisitor.visitMethodInsn(
         Opcodes.INVOKESTATIC,
-        CC_SINKS_CLASS,
+        SINKS_CLASS_CC,
         GET_SINK_DATA_METHOD_NAME,
         GET_SINK_DATA_METHOD_DESC,
         false);
@@ -126,7 +126,7 @@ public final class SinkInstrumenter {
   }
 
   public static String getFieldName(String id) {
-    return CC_STATIC_FIELD_PREFIX + id;
+    return STATIC_FIELD_PREFIX_CC + id;
   }
 
   public static void saveControlStmts() {
