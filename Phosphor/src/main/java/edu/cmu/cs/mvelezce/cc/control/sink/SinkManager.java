@@ -37,7 +37,39 @@ public final class SinkManager {
   public static void postProcessSinks() {
     long start = System.nanoTime();
     saveData();
+    saveClassesToInts();
+    saveFieldsToInts();
     System.out.println("Sink processing took " + (System.nanoTime() - start) / 1E9 + " s");
+  }
+
+  private static void saveClassesToInts() {
+    File outputFile =
+        new File("../../../examples/control/" + SinkManager.programName + "/classes.ser");
+    try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
+      for (Map.Entry<Class, Integer> entry : CLASSES_TO_INTS.entrySet()) {
+        dos.writeBytes(entry.getKey().getName());
+        dos.write(NEW_LINE_BYTES);
+        dos.writeInt(entry.getValue());
+        dos.write(NEW_LINE_BYTES);
+      }
+    } catch (IOException ioe) {
+      throw new RuntimeException(ioe);
+    }
+  }
+
+  private static void saveFieldsToInts() {
+    File outputFile =
+        new File("../../../examples/control/" + SinkManager.programName + "/fields.ser");
+    try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(outputFile))) {
+      for (Map.Entry<Field, Integer> entry : FIELDS_TO_INTS.entrySet()) {
+        dos.writeBytes(entry.getKey().getName());
+        dos.write(NEW_LINE_BYTES);
+        dos.writeInt(entry.getValue());
+        dos.write(NEW_LINE_BYTES);
+      }
+    } catch (IOException ioe) {
+      throw new RuntimeException(ioe);
+    }
   }
 
   private static <T> void saveData() {
