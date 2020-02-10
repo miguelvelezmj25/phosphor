@@ -37,12 +37,25 @@ public final class SinkManager {
   }
 
   public static void postProcessSinks() {
+    long START = System.nanoTime();
     long start = System.nanoTime();
     saveData();
+    long end = System.nanoTime();
+    System.out.println("save data " + (end - start) / 1E9 + " s");
+    start = System.nanoTime();
     saveClasses();
+    end = System.nanoTime();
+    System.out.println("save classes " + (end - start) / 1E9 + " s");
+    start = System.nanoTime();
     saveField();
+    end = System.nanoTime();
+    System.out.println("save fields " + (end - start) / 1E9 + " s");
+    start = System.nanoTime();
     saveTaints();
-    System.out.println("Sink processing took " + (System.nanoTime() - start) / 1E9 + " s");
+    end = System.nanoTime();
+    System.out.println("save taints " + (end - start) / 1E9 + " s");
+    long END = System.nanoTime();
+    System.out.println("Sink processing took " + (END - START) / 1E9 + " s");
   }
 
   private static void saveClasses() {
