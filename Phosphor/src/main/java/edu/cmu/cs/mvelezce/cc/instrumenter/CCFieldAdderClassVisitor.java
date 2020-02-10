@@ -1,6 +1,5 @@
 package edu.cmu.cs.mvelezce.cc.instrumenter;
 
-import edu.cmu.cs.mvelezce.cc.control.sink.SinkManager;
 import edu.columbia.cs.psl.phosphor.Configuration;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -32,7 +31,8 @@ public class CCFieldAdderClassVisitor extends ClassVisitor {
 
   @Override
   public void visitEnd() {
-    for (Map.Entry<ControlStmt, String> entry : SinkManager.CONTROL_STMTS_TO_FIELDS.entrySet()) {
+    for (Map.Entry<ControlStmt, String> entry :
+        SinkInstrumenter.CONTROL_STMTS_TO_FIELDS.entrySet()) {
       ControlStmt sink = entry.getKey();
 
       if (!sink.getClassName().equals(this.className)) {
@@ -41,9 +41,9 @@ public class CCFieldAdderClassVisitor extends ClassVisitor {
 
       super.visitField(
           Opcodes.ACC_PUBLIC + Opcodes.ACC_STATIC + Opcodes.ACC_FINAL,
-          SinkManager.getFieldName(entry.getValue()),
-          SinkManager.SET_CLASS_DESC_FOR_FIELD,
-          SinkManager.SET_CLASS_SIGNATURE_FOR_FIELD,
+          SinkInstrumenter.getFieldName(entry.getValue()),
+          SinkInstrumenter.SET_CLASS_DESC_FOR_FIELD,
+          SinkInstrumenter.SET_CLASS_SIGNATURE_FOR_FIELD,
           null);
     }
 

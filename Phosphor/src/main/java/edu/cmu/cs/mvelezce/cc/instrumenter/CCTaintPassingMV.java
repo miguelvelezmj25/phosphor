@@ -1,6 +1,5 @@
 package edu.cmu.cs.mvelezce.cc.instrumenter;
 
-import edu.cmu.cs.mvelezce.cc.control.sink.SinkManager;
 import edu.columbia.cs.psl.phosphor.control.ControlFlowPropagationPolicy;
 import edu.columbia.cs.psl.phosphor.instrumenter.TaintPassingMV;
 import edu.columbia.cs.psl.phosphor.instrumenter.analyzer.NeverNullArgAnalyzerAdapter;
@@ -67,7 +66,7 @@ public class CCTaintPassingMV extends TaintPassingMV {
       case Opcodes.IF_ICMPLE:
       case Opcodes.IF_ACMPNE:
       case Opcodes.IF_ACMPEQ:
-        SinkManager.setCurrentMethod(this.className, this.name, this.desc);
+        SinkInstrumenter.setCurrentMethod(this.className, this.name, this.desc);
         break;
     }
 
@@ -76,13 +75,13 @@ public class CCTaintPassingMV extends TaintPassingMV {
 
   @Override
   public void visitTableSwitchInsn(int min, int max, Label defaultLabel, Label[] labels) {
-    SinkManager.setCurrentMethod(this.className, this.name, this.desc);
+    SinkInstrumenter.setCurrentMethod(this.className, this.name, this.desc);
     super.visitTableSwitchInsn(min, max, defaultLabel, labels);
   }
 
   @Override
   public void visitLookupSwitchInsn(Label defaultLabel, int[] keys, Label[] labels) {
-    SinkManager.setCurrentMethod(this.className, this.name, this.desc);
+    SinkInstrumenter.setCurrentMethod(this.className, this.name, this.desc);
     super.visitLookupSwitchInsn(defaultLabel, keys, labels);
   }
 }

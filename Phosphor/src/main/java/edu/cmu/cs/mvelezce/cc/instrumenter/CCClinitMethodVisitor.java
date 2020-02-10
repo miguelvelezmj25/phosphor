@@ -1,6 +1,5 @@
 package edu.cmu.cs.mvelezce.cc.instrumenter;
 
-import edu.cmu.cs.mvelezce.cc.control.sink.SinkManager;
 import edu.columbia.cs.psl.phosphor.Configuration;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
@@ -22,22 +21,23 @@ public class CCClinitMethodVisitor extends MethodVisitor {
   @Override
   public void visitCode() {
     super.visitCode();
-    for (Map.Entry<ControlStmt, String> entry : SinkManager.CONTROL_STMTS_TO_FIELDS.entrySet()) {
+    for (Map.Entry<ControlStmt, String> entry :
+        SinkInstrumenter.CONTROL_STMTS_TO_FIELDS.entrySet()) {
       ControlStmt sink = entry.getKey();
 
       if (!sink.getClassName().equals(this.className)) {
         continue;
       }
 
-      super.visitTypeInsn(Opcodes.NEW, SinkManager.HASHSET_CLASS_NAME);
+      super.visitTypeInsn(Opcodes.NEW, SinkInstrumenter.HASHSET_CLASS_NAME);
       super.visitInsn(Opcodes.DUP);
       super.visitMethodInsn(
-          Opcodes.INVOKESPECIAL, SinkManager.HASHSET_CLASS_NAME, "<init>", "()V", false);
+          Opcodes.INVOKESPECIAL, SinkInstrumenter.HASHSET_CLASS_NAME, "<init>", "()V", false);
       super.visitFieldInsn(
           Opcodes.PUTSTATIC,
           this.className,
-          SinkManager.getFieldName(entry.getValue()),
-          SinkManager.SET_CLASS_DESC_FOR_FIELD);
+          SinkInstrumenter.getFieldName(entry.getValue()),
+          SinkInstrumenter.SET_CLASS_DESC_FOR_FIELD);
     }
   }
 }
