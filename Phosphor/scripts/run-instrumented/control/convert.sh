@@ -61,7 +61,7 @@ function run() {
 
 rm -rf $BASE/../../../examples/control/$PROGRAM_NAME
 mkdir $BASE/../../../examples/control/$PROGRAM_NAME
-rm -rf tmp
-mkdir tmp
+rm -rf output
+mkdir output
 time run $PROGRAM_JAR $MAIN_CLASS $ARG1 $ARG2 $ARG3 $ARG4 $ARG5 $ARG6 $ARG7 $ARG8 $ARG9 $ARG10 $ARG11 $ARG12 $ARG13 $ARG14 $ARG15 $ARG16 $ARG17 $ARG18 $ARG19 $ARG20 $ARG21 $ARG22
-rm -rf tmp
+rm -rf output

@@ -42,6 +42,8 @@ function inst() {
 
   java -Xmx10g -jar $phosphor_jar -withCCSinks $programName -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
   #  java -Xmx10g -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar $phosphor_jar -withCCSinks $programName -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir $programName
+
+  #  java -Xmx10g -jar $phosphor_jar -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
 }
 
 (
