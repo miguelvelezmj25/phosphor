@@ -52,3 +52,5 @@ dependency-reduced-pom.xml
 
 
 **/*.ser
+/Phosphor/scripts/run-instrumented/control/index/
+/Phosphor/scripts/run-instrumented/control/output/
