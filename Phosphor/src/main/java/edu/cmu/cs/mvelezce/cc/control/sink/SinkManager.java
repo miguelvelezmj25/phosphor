@@ -63,7 +63,7 @@ public final class SinkManager {
       for (Map.Entry<Field, Integer> entry : FIELDS_TO_INTS.entrySet()) {
         dos.writeBytes(entry.getKey().getName());
         dos.write(NEW_LINE_BYTES);
-        dos.writeInt(entry.getValue());
+        dos.writeBytes(entry.getValue() + "");
         dos.write(NEW_LINE_BYTES);
       }
     } catch (IOException ioe) {
@@ -107,6 +107,11 @@ public final class SinkManager {
         Field[] fields = clazz.getFields();
 
         for (Field field : fields) {
+          if (FIELDS_TO_INTS.containsKey(field)) {
+            // anonymous classes would have the same static fields
+            continue;
+          }
+
           String fieldName = field.getName();
 
           if (!fieldName.startsWith(SinkInstrumenter.STATIC_FIELD_PREFIX_CC)) {
@@ -125,9 +130,8 @@ public final class SinkManager {
             Integer taintIndex = TAINTS_TO_INTS.get(control);
 
             if (taintIndex == null) {
-              TAINTS_TO_INTS.put(control, SinkManager.taintCount);
               taintIndex = SinkManager.taintCount;
-              SinkManager.taintCount++;
+              saveTaint(control);
             }
 
             dos.writeInt(taintIndex);
@@ -137,9 +141,8 @@ public final class SinkManager {
             taintIndex = TAINTS_TO_INTS.get(data);
 
             if (taintIndex == null) {
-              TAINTS_TO_INTS.put(data, SinkManager.taintCount);
               taintIndex = SinkManager.taintCount;
-              SinkManager.taintCount++;
+              saveTaint(data);
             }
 
             dos.writeInt(taintIndex);
@@ -155,6 +158,11 @@ public final class SinkManager {
     } catch (IOException | IllegalAccessException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  private static <T> void saveTaint(Taint<T> taint) {
+    TAINTS_TO_INTS.put(taint, SinkManager.taintCount);
+    SinkManager.taintCount++;
   }
 
   public static <T> SinkData<T> getSinkData(
