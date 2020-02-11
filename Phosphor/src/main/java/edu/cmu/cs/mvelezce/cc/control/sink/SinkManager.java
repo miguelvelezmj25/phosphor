@@ -138,6 +138,12 @@ public final class SinkManager {
             dos.write(NEW_LINE_BYTES);
 
             Taint<T> data = entry.getData();
+
+            if (data == null) {
+              throw new RuntimeException(
+                  "Handle data taints that are null vs data taints that are empty");
+            }
+
             taintIndex = TAINTS_TO_INTS.get(data);
 
             if (taintIndex == null) {
