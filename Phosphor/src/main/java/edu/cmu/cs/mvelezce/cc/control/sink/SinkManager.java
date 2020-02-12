@@ -21,6 +21,7 @@ public final class SinkManager {
   public static final byte[] NEW_LINE_BYTES = "\n".getBytes();
   public static final byte[] LABEL_SEP_BYTES = ":".getBytes();
   public static final int LABELS_END = Integer.MIN_VALUE;
+  public static final int NULL_TAINT_LABEL = -1;
 
   private static final Map<Field, Integer> FIELDS_TO_INTS = new HashMap<>();
   private static final Map<Taint, Integer> TAINTS_TO_INTS = new HashMap<>();
@@ -78,7 +79,10 @@ public final class SinkManager {
       for (Map.Entry<Taint, Integer> entry : TAINTS_TO_INTS.entrySet()) {
         Taint taint = entry.getKey();
 
-        if (taint != null) {
+        if (taint == null) {
+          dos.writeInt(NULL_TAINT_LABEL);
+          dos.write(LABEL_SEP_BYTES);
+        } else {
           for (Object label : taint.getLabels()) {
             dos.writeInt((Integer) label);
             dos.write(LABEL_SEP_BYTES);
@@ -138,12 +142,6 @@ public final class SinkManager {
             dos.write(NEW_LINE_BYTES);
 
             Taint<T> data = entry.getData();
-
-            if (data == null) {
-              throw new RuntimeException(
-                  "Handle data taints that are null vs data taints that are empty");
-            }
-
             taintIndex = TAINTS_TO_INTS.get(data);
 
             if (taintIndex == null) {
