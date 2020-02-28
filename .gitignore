@@ -52,3 +52,5 @@ dependency-reduced-pom.xml
 
 
 **/*.ser
+/Phosphor/scripts/run-instrumented/control/lucene/workloads/large
+/Phosphor/scripts/run-instrumented/control/files/large
