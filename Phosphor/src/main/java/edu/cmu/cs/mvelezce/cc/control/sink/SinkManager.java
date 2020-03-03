@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
+//import java.util.Arrays;
 
 public final class SinkManager {
 
@@ -171,6 +172,23 @@ public final class SinkManager {
 
   public static <T> SinkData<T> getSinkData(
       StandardControlFlowStack<T> stack, Taint<T> dataTaints) {
+    //if (stack != null
+    //    && stack.copyTag() != null
+    //    && stack.copyTag().getLabels() != null
+    //    && dataTaints != null
+    //    && dataTaints.getLabels() != null) {
+    //  if (!stack.copyTag().isEmpty() || !dataTaints.isEmpty()) {
+    //    System.out.println(
+    //        "Logging "
+    //            + Arrays.toString(stack.copyTag().getLabels())
+    //            + " - "
+    //            + Arrays.toString(dataTaints.getLabels()));
+    //  }
+    //
+    //  if (dataTaints.getLabels().length > 6) {
+    //    System.out.println();
+    //  }
+    //}
     // TODO Should we cache these taints?
     return new SinkData<T>(stack.copyTag(), dataTaints);
   }
