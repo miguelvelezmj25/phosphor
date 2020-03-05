@@ -172,14 +172,16 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
     @Override
     public void visitingJump(int opcode, Label label) {
         switch(opcode) {
+            case Opcodes.IFNULL:
+            case Opcodes.IFNONNULL:
+                delegate.visitInsn(POP);
+                break;
             case Opcodes.IFEQ:
             case Opcodes.IFNE:
             case Opcodes.IFLT:
             case Opcodes.IFGE:
             case Opcodes.IFGT:
             case Opcodes.IFLE:
-            case Opcodes.IFNULL:
-            case Opcodes.IFNONNULL:
                 // v t
                 pushBranchStart();
                 delegate.visitInsn(POP); // Remove the taint tag
