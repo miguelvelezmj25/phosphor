@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# ./instrument_project.sh ../../../../../performance-mapper-evaluation/phosphor/tracing tracing-0.1.0-SNAPSHOT.jar Tracing1
+
 DIR=${1}
 JAR_NAME=${2}
 PROGRAM_NAME=${3}
