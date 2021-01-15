@@ -147,6 +147,7 @@ public final class SinkInstrumenter {
                   + Configuration.PROGRAM_NAME
                   + ".json");
       ObjectMapper mapper = new ObjectMapper();
+      mapper.enable(SerializationFeature.INDENT_OUTPUT);
       mapper.writeValue(outputFile, controlStmtFields);
     } catch (IOException ioe) {
       throw new RuntimeException(ioe);
