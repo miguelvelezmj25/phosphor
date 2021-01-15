@@ -1,6 +1,7 @@
 package edu.cmu.cs.mvelezce.cc.instrumenter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import edu.cmu.cs.mvelezce.cc.control.sink.ControlStmtField;
 import edu.cmu.cs.mvelezce.cc.control.sink.SinkManager;
 import edu.columbia.cs.psl.phosphor.Configuration;
@@ -141,7 +142,8 @@ public final class SinkInstrumenter {
     try {
       File outputFile =
           new File(
-              "/Users/mvelezce/Documents/programming/java/projects/phosphor/Phosphor/scripts/instrument/control/"
+              System.getProperty("user.home")
+                  + "/Documents/programming/java/projects/phosphor/Phosphor/scripts/instrument/control/"
                   + Configuration.PROGRAM_NAME
                   + ".json");
       ObjectMapper mapper = new ObjectMapper();
