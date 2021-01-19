@@ -1,0 +1,25 @@
+[ {
+  "controlStmt" : {
+    "className" : "edu/cmu/cs/mvelezce/tracing/Trace1",
+    "methodName" : "main",
+    "desc" : "([Ljava/lang/String;)V",
+    "index" : 1
+  },
+  "field" : "pIcacSNsbaANMWOw"
+}, {
+  "controlStmt" : {
+    "className" : "edu/cmu/cs/mvelezce/tracing/Trace2",
+    "methodName" : "moo",
+    "desc" : "(Z)I",
+    "index" : 1
+  },
+  "field" : "C3Do3YAkf6zTHNTU"
+}, {
+  "controlStmt" : {
+    "className" : "edu/cmu/cs/mvelezce/tracing/Trace2",
+    "methodName" : "bar",
+    "desc" : "(I)V",
+    "index" : 1
+  },
+  "field" : "av6NINTHdNyRbmt7"
+} ]
