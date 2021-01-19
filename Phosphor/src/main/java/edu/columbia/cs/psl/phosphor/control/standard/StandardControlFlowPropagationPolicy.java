@@ -128,7 +128,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
         copyTag();
         COMBINE_TAGS.delegateVisit(delegate);
         if(Configuration.WITH_TAINT_DEBUG) {
-            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
         }
         delegate.visitVarInsn(ASTORE, shadowVar);
     }
@@ -145,7 +145,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                 copyTag();
                 COMBINE_TAGS.delegateVisit(delegate);
                 if(Configuration.WITH_TAINT_DEBUG) {
-                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
                 }
                 break;
         }
@@ -156,7 +156,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
         copyTag();
         COMBINE_TAGS.delegateVisit(delegate);
         if(Configuration.WITH_TAINT_DEBUG) {
-            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
         }
     }
 
@@ -165,7 +165,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
         copyTag();
         COMBINE_TAGS.delegateVisit(delegate);
         if(Configuration.WITH_TAINT_DEBUG) {
-            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
         }
     }
 
@@ -181,7 +181,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
             copyTag();
             COMBINE_TAGS.delegateVisit(delegate);
             if(Configuration.WITH_TAINT_DEBUG) {
-                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
             }
         }
     }
@@ -219,7 +219,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                 // v1 v2 t2 t1
                 COMBINE_TAGS.delegateVisit(delegate);
                 if(Configuration.WITH_TAINT_DEBUG) {
-                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
                 }
                 // v1 v2 t
                 pushBranchStart();
@@ -252,7 +252,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                 copyTag();
                 COMBINE_TAGS.delegateVisit(delegate);
                 if(Configuration.WITH_TAINT_DEBUG) {
-                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
                 }
             }
         } else if(info instanceof BranchStart) {
@@ -375,7 +375,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                     copyTag();
                     COMBINE_TAGS.delegateVisit(delegate);
                     if(Configuration.WITH_TAINT_DEBUG) {
-                        TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                        TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
                     }
                     delegate.visitVarInsn(ASTORE, shadowVar);
                 } else {
@@ -386,7 +386,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                         delegate.visitVarInsn(ALOAD, localVariableManager.getIndexOfMasterControlLV());
                         COMBINE_TAGS_ON_OBJECT_CONTROL.delegateVisit(delegate);
                         if(Configuration.WITH_TAINT_DEBUG) {
-                            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
                         }
                     }
                 }
@@ -414,7 +414,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
             copyTag();
             COMBINE_TAGS.delegateVisit(delegate);
             if(Configuration.WITH_TAINT_DEBUG) {
-                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
             }
             delegate.visitFieldInsn(putFieldOpcode, field.owner, field.name + TaintUtils.TAINT_FIELD, Configuration.TAINT_TAG_DESC);
         } else if(Type.getType(field.description).getSort() == Type.OBJECT) {
@@ -427,7 +427,7 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
             delegate.visitVarInsn(ALOAD, localVariableManager.getIndexOfMasterControlLV());
             COMBINE_TAGS_ON_OBJECT_CONTROL.delegateVisit(delegate);
             if(Configuration.WITH_TAINT_DEBUG) {
-                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber, TaintPassingMV.currentClass);
             }
         }
     }

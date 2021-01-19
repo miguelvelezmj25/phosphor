@@ -35,6 +35,10 @@ import static edu.columbia.cs.psl.phosphor.instrumenter.TaintTrackingClassVisito
 
 public class TaintPassingMV extends TaintAdapter implements Opcodes {
 
+    public static String currentClass;
+    public static String currentMethod;
+    public static String currentDesc;
+
     static final String BYTE_NAME = "java/lang/Byte";
     static final String BOOLEAN_NAME = "java/lang/Boolean";
     static final String INTEGER_NAME = "java/lang/Integer";
@@ -87,6 +91,10 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
         this.originalMethodReturnType = Type.getReturnType(originalDesc);
         this.newReturnType = Type.getReturnType(descriptor);
         this.controlFlowPolicy = controlFlowPolicy;
+
+        currentClass = this.owner;
+        currentMethod = this.name;
+        currentDesc = this.descriptor;
     }
 
     @Override
@@ -282,7 +290,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
                 controlFlowPolicy.visitingInstanceFieldLoad(owner, name, desc);
                 COMBINE_TAGS.delegateVisit(mv);
                 if(Configuration.WITH_TAINT_DEBUG) {
-                    TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber);
+                    TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, this.owner);
                 }
                 // [value taint]
                 break;
@@ -1621,7 +1629,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
         controlFlowPolicy.visitingArrayLoad(opcode);
         COMBINE_TAGS.delegateVisit(mv);
         if(Configuration.WITH_TAINT_DEBUG) {
-            TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber);
+            TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, this.owner);
         }
     }
 

@@ -9,10 +9,12 @@ public class TaintDebugInstrumenter {
   private static final String TAINT_DEBUG_MANAGER_CLASS =
       TaintDebugManager.class.getName().replaceAll("\\.", "\\/");
   private static final String TAINT_DEBUG_MANAGER_METHOD = "lineNumber";
-  private static final String TAINT_DEBUG_MANAGER_DES = "(I)V";
+  private static final String TAINT_DEBUG_MANAGER_DES = "(ILjava/lang/String;)V";
 
-  public static void instrumentCombineTags(MethodVisitor mv, int currentLineNumber) {
+  public static void instrumentCombineTags(
+      MethodVisitor mv, int currentLineNumber, String className) {
     mv.visitIntInsn(Opcodes.BIPUSH, currentLineNumber);
+    mv.visitLdcInsn(className);
     mv.visitMethodInsn(
         Opcodes.INVOKESTATIC,
         TAINT_DEBUG_MANAGER_CLASS,
