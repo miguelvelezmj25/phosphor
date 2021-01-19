@@ -94,7 +94,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
 
         currentClass = this.owner;
         currentMethod = this.name;
-        currentDesc = this.descriptor;
+        currentDesc = originalDesc;
     }
 
     @Override
@@ -290,7 +290,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
                 controlFlowPolicy.visitingInstanceFieldLoad(owner, name, desc);
                 COMBINE_TAGS.delegateVisit(mv);
                 if(Configuration.WITH_TAINT_DEBUG) {
-                    TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, this.owner);
+                    TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, currentClass, currentMethod, currentDesc);
                 }
                 // [value taint]
                 break;
@@ -1629,7 +1629,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
         controlFlowPolicy.visitingArrayLoad(opcode);
         COMBINE_TAGS.delegateVisit(mv);
         if(Configuration.WITH_TAINT_DEBUG) {
-            TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, this.owner);
+            TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, currentClass, currentMethod, currentDesc);
         }
     }
 

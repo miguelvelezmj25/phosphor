@@ -103,7 +103,7 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
                 } else {
                     COMBINE_TAGS.delegateVisit(mv);
                     if(Configuration.WITH_TAINT_DEBUG) {
-                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, TaintPassingMV.currentClass);
+                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, TaintPassingMV.currentClass, TaintPassingMV.currentMethod, TaintPassingMV.currentDesc);
                     }
                 }
                 //VV T
@@ -147,7 +147,7 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
                 } else {
                     COMBINE_TAGS.delegateVisit(mv);
                     if(Configuration.WITH_TAINT_DEBUG) {
-                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, TaintPassingMV.currentClass);
+                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, TaintPassingMV.currentClass, TaintPassingMV.currentMethod, TaintPassingMV.currentDesc);
                     }
                 }
                 //VV  VV T
@@ -174,7 +174,7 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
                 } else {
                     COMBINE_TAGS.delegateVisit(mv);
                     if(Configuration.WITH_TAINT_DEBUG) {
-                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, TaintPassingMV.currentClass);
+                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, TaintPassingMV.currentClass, TaintPassingMV.currentMethod, TaintPassingMV.currentDesc);
                     }
                 }
                 //VV V T
@@ -312,7 +312,7 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
                 mv.visitVarInsn(Configuration.TAINT_LOAD_OPCODE, idx);
                 COMBINE_TAGS.delegateVisit(mv);
                 if(Configuration.WITH_TAINT_DEBUG) {
-                    TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, className);
+                    TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber, className, methodName, newDesc);
                 }
                 idx++;
             }
