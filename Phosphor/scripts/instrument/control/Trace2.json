@@ -1,19 +1,11 @@
 [ {
   "controlStmt" : {
-    "className" : "edu/cmu/cs/mvelezce/tracing/Trace1",
-    "methodName" : "main",
-    "desc" : "([Ljava/lang/String;)V",
-    "index" : 1
-  },
-  "field" : "pIcacSNsbaANMWOw"
-}, {
-  "controlStmt" : {
     "className" : "edu/cmu/cs/mvelezce/tracing/Trace2",
     "methodName" : "moo",
     "desc" : "(Z)I",
     "index" : 1
   },
-  "field" : "C3Do3YAkf6zTHNTU"
+  "field" : "xG1Y6g0A35UYkxIJ"
 }, {
   "controlStmt" : {
     "className" : "edu/cmu/cs/mvelezce/tracing/Trace2",
@@ -21,5 +13,13 @@
     "desc" : "(I)V",
     "index" : 1
   },
-  "field" : "av6NINTHdNyRbmt7"
+  "field" : "mJJ7uy48xcpGArW9"
+}, {
+  "controlStmt" : {
+    "className" : "edu/cmu/cs/mvelezce/tracing/Trace1",
+    "methodName" : "main",
+    "desc" : "([Ljava/lang/String;)V",
+    "index" : 1
+  },
+  "field" : "0wxZEIjDQwOdk3ZT"
 } ]
