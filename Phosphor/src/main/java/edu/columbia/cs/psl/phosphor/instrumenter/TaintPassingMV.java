@@ -1,5 +1,6 @@
 package edu.columbia.cs.psl.phosphor.instrumenter;
 
+import edu.cmu.cs.mvelezce.taint.debug.instrument.TaintDebugInstrumenter;
 import edu.columbia.cs.psl.phosphor.Configuration;
 import edu.columbia.cs.psl.phosphor.Instrumenter;
 import edu.columbia.cs.psl.phosphor.PhosphorInstructionInfo;
@@ -58,7 +59,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
     private final List<MethodNode> wrapperMethodsToAdd;
     private final Set<Label> exceptionHandlers = new HashSet<>();
     ReferenceArrayTarget referenceArrayTarget;
-    int line = 0;
+    public static int currentLineNumber = -1;
     private boolean isIgnoreAllInstrumenting;
     private boolean isRawInstruction = false;
     private boolean isTaintlessArrayStore = false;
@@ -280,6 +281,9 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
                 // [value taint1 taint2]
                 controlFlowPolicy.visitingInstanceFieldLoad(owner, name, desc);
                 COMBINE_TAGS.delegateVisit(mv);
+                if(Configuration.WITH_TAINT_DEBUG) {
+                    TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber);
+                }
                 // [value taint]
                 break;
             case Opcodes.PUTSTATIC:
@@ -1616,6 +1620,9 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
         // [value, reference-taint, value-taint]
         controlFlowPolicy.visitingArrayLoad(opcode);
         COMBINE_TAGS.delegateVisit(mv);
+        if(Configuration.WITH_TAINT_DEBUG) {
+            TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber);
+        }
     }
 
     /**
@@ -1702,7 +1709,7 @@ public class TaintPassingMV extends TaintAdapter implements Opcodes {
     @Override
     public void visitLineNumber(int line, Label start) {
         super.visitLineNumber(line, start);
-        this.line = line;
+        currentLineNumber = line;
         taintTagFactory.lineNumberVisited(line);
     }
 

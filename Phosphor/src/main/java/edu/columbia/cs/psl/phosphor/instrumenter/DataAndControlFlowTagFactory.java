@@ -1,5 +1,6 @@
 package edu.columbia.cs.psl.phosphor.instrumenter;
 
+import edu.cmu.cs.mvelezce.taint.debug.instrument.TaintDebugInstrumenter;
 import edu.columbia.cs.psl.phosphor.Configuration;
 import edu.columbia.cs.psl.phosphor.TaintUtils;
 import edu.columbia.cs.psl.phosphor.runtime.Taint;
@@ -13,6 +14,8 @@ import static edu.columbia.cs.psl.phosphor.instrumenter.TaintMethodRecord.NEW_EM
 
 
 public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
+
+    private static int currentLineNumber = -1;
 
     @Override
     public Taint<?> getAutoTaint(String source) {
@@ -36,7 +39,7 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
 
     @Override
     public void lineNumberVisited(int line) {
-
+        currentLineNumber = line;
     }
 
     @Override
@@ -99,6 +102,9 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
                     NEW_EMPTY_TAINT.delegateVisit(mv);
                 } else {
                     COMBINE_TAGS.delegateVisit(mv);
+                    if(Configuration.WITH_TAINT_DEBUG) {
+                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber);
+                    }
                 }
                 //VV T
                 mv.visitInsn(DUP_X2);
@@ -140,6 +146,9 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
                     NEW_EMPTY_TAINT.delegateVisit(mv);
                 } else {
                     COMBINE_TAGS.delegateVisit(mv);
+                    if(Configuration.WITH_TAINT_DEBUG) {
+                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber);
+                    }
                 }
                 //VV  VV T
                 mv.visitVarInsn(ASTORE, tmp);
@@ -164,6 +173,9 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
                     NEW_EMPTY_TAINT.delegateVisit(mv);
                 } else {
                     COMBINE_TAGS.delegateVisit(mv);
+                    if(Configuration.WITH_TAINT_DEBUG) {
+                        TaintDebugInstrumenter.instrumentCombineTags(mv, currentLineNumber);
+                    }
                 }
                 //VV V T
                 mv.visitVarInsn(ASTORE, tmp);
@@ -299,6 +311,9 @@ public class DataAndControlFlowTagFactory implements TaintTagFactory, Opcodes {
             if (TaintUtils.isShadowedType(t)) {
                 mv.visitVarInsn(Configuration.TAINT_LOAD_OPCODE, idx);
                 COMBINE_TAGS.delegateVisit(mv);
+                if(Configuration.WITH_TAINT_DEBUG) {
+                    TaintDebugInstrumenter.instrumentCombineTags(mv, this.currentLineNumber);
+                }
                 idx++;
             }
         }

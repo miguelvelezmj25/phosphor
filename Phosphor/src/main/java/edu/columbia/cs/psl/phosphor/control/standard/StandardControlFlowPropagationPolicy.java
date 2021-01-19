@@ -1,6 +1,7 @@
 package edu.columbia.cs.psl.phosphor.control.standard;
 
 import edu.cmu.cs.mvelezce.cc.instrumenter.SinkInstrumenter;
+import edu.cmu.cs.mvelezce.taint.debug.instrument.TaintDebugInstrumenter;
 import edu.columbia.cs.psl.phosphor.Configuration;
 import edu.columbia.cs.psl.phosphor.PhosphorInstructionInfo;
 import edu.columbia.cs.psl.phosphor.TaintUtils;
@@ -9,6 +10,7 @@ import edu.columbia.cs.psl.phosphor.control.LocalVariable;
 import edu.columbia.cs.psl.phosphor.control.standard.ForceControlStore.ForceControlStoreField;
 import edu.columbia.cs.psl.phosphor.control.standard.ForceControlStore.ForceControlStoreLocal;
 import edu.columbia.cs.psl.phosphor.instrumenter.MethodRecord;
+import edu.columbia.cs.psl.phosphor.instrumenter.TaintPassingMV;
 import edu.columbia.cs.psl.phosphor.struct.EnqueuedTaint;
 import edu.columbia.cs.psl.phosphor.struct.ExceptionalTaintData;
 import edu.columbia.cs.psl.phosphor.struct.Field;
@@ -125,6 +127,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
         delegate.visitVarInsn(ALOAD, shadowVar); // Current tag
         copyTag();
         COMBINE_TAGS.delegateVisit(delegate);
+        if(Configuration.WITH_TAINT_DEBUG) {
+            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+        }
         delegate.visitVarInsn(ASTORE, shadowVar);
     }
 
@@ -139,6 +144,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                 // value taint
                 copyTag();
                 COMBINE_TAGS.delegateVisit(delegate);
+                if(Configuration.WITH_TAINT_DEBUG) {
+                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                }
                 break;
         }
     }
@@ -147,12 +155,18 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
     public void visitingArrayStore(int opcode) {
         copyTag();
         COMBINE_TAGS.delegateVisit(delegate);
+        if(Configuration.WITH_TAINT_DEBUG) {
+            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+        }
     }
 
     @Override
     public void visitingFieldStore(int opcode, String owner, String name, String descriptor) {
         copyTag();
         COMBINE_TAGS.delegateVisit(delegate);
+        if(Configuration.WITH_TAINT_DEBUG) {
+            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+        }
     }
 
     @Override
@@ -166,6 +180,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
             // Exception Taint
             copyTag();
             COMBINE_TAGS.delegateVisit(delegate);
+            if(Configuration.WITH_TAINT_DEBUG) {
+                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+            }
         }
     }
 
@@ -201,6 +218,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                 delegate.visitInsn(POP2);
                 // v1 v2 t2 t1
                 COMBINE_TAGS.delegateVisit(delegate);
+                if(Configuration.WITH_TAINT_DEBUG) {
+                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                }
                 // v1 v2 t
                 pushBranchStart();
                 delegate.visitInsn(POP); // Remove the taint tag
@@ -231,6 +251,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
             if(!analyzer.stack.isEmpty() && !Configuration.WITHOUT_BRANCH_NOT_TAKEN) {
                 copyTag();
                 COMBINE_TAGS.delegateVisit(delegate);
+                if(Configuration.WITH_TAINT_DEBUG) {
+                    TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                }
             }
         } else if(info instanceof BranchStart) {
             nextBranchID = ((BranchStart) info).getBranchID();
@@ -351,6 +374,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                     delegate.visitVarInsn(ALOAD, shadowVar);
                     copyTag();
                     COMBINE_TAGS.delegateVisit(delegate);
+                    if(Configuration.WITH_TAINT_DEBUG) {
+                        TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                    }
                     delegate.visitVarInsn(ASTORE, shadowVar);
                 } else {
                     if(!(analyzer.locals.get(var) instanceof Integer)) {
@@ -359,6 +385,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
                         delegate.visitVarInsn(ALOAD, var);
                         delegate.visitVarInsn(ALOAD, localVariableManager.getIndexOfMasterControlLV());
                         COMBINE_TAGS_ON_OBJECT_CONTROL.delegateVisit(delegate);
+                        if(Configuration.WITH_TAINT_DEBUG) {
+                            TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+                        }
                     }
                 }
             }
@@ -384,6 +413,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
             delegate.visitFieldInsn(getFieldOpcode, field.owner, field.name + TaintUtils.TAINT_FIELD, Configuration.TAINT_TAG_DESC);
             copyTag();
             COMBINE_TAGS.delegateVisit(delegate);
+            if(Configuration.WITH_TAINT_DEBUG) {
+                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+            }
             delegate.visitFieldInsn(putFieldOpcode, field.owner, field.name + TaintUtils.TAINT_FIELD, Configuration.TAINT_TAG_DESC);
         } else if(Type.getType(field.description).getSort() == Type.OBJECT) {
             // Probably wrong since reference tainting update
@@ -394,6 +426,9 @@ public class StandardControlFlowPropagationPolicy extends AbstractControlFlowPro
             delegate.visitFieldInsn(getFieldOpcode, field.owner, field.name, field.description);
             delegate.visitVarInsn(ALOAD, localVariableManager.getIndexOfMasterControlLV());
             COMBINE_TAGS_ON_OBJECT_CONTROL.delegateVisit(delegate);
+            if(Configuration.WITH_TAINT_DEBUG) {
+                TaintDebugInstrumenter.instrumentCombineTags(delegate, TaintPassingMV.currentLineNumber);
+            }
         }
     }
 
