@@ -215,6 +215,9 @@ public class Instrumenter {
         if(Configuration.WITH_CC_SINKS) {
             System.out.println("Adding CC sinks");
         }
+        if(Configuration.WITH_TAINT_DEBUG) {
+            System.out.println("Adding taint debugging");
+        }
         TaintTrackingClassVisitor.IS_RUNTIME_INST = false;
         ANALYZE_ONLY = true;
         System.out.println("Starting analysis");
@@ -327,7 +330,7 @@ public class Instrumenter {
 
         final ExecutorService executor;
 
-        if(Configuration.WITH_CC_SINKS) {
+        if(Configuration.WITH_CC_SINKS || Configuration.WITH_TAINT_DEBUG) {
             executor = Executors.newFixedThreadPool(1);
         } else {
             executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());

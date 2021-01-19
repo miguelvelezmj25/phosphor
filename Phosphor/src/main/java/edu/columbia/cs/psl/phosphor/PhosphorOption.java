@@ -14,6 +14,13 @@ import java.io.FileNotFoundException;
 
 public enum PhosphorOption {
 
+    WITH_TAINT_DEBUG(new PhosphorOptionBuilder("Add debugging information about how taints are propagated",
+            true, false)) {
+        @Override
+        public void configure(boolean forRuntimeInst, boolean isPresent, CommandLine commandLine) {
+            Configuration.WITH_TAINT_DEBUG = isPresent;
+        }
+    },
     WITH_CC_SINKS(new PhosphorOptionBuilder("Add sinks for CC analysis", true, false)
             .alternativeName("withCCSinks").argType(String.class)) {
         @Override

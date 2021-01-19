@@ -40,7 +40,7 @@ function inst() {
   local jar=$2
   local dir=$3
 
-  java -Xmx10g -jar $phosphor_jar -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
+  java -Xmx10g -jar $phosphor_jar -withTaintDebug -controlTrack -withoutBranchNotTaken -forceUnboxAcmpEq -withEnumsByValue ./target/$jar $dir
 }
 
 (
